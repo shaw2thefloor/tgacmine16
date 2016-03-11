@@ -46,7 +46,7 @@ class Backend:
 
     def generate_test_data(self, inputfolder):
         curdir = os.getcwd()
-        testdata = CProject(curdir, "testdata")
+        testdata = CProject(curdir, inputfolder)
         for ctree in testdata.get_ctrees():
             yield ctree.get_classifier_features()
 
