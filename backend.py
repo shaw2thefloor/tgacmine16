@@ -41,7 +41,7 @@ class Backend:
         # use this boost coefficient to rank the results in the form
         # where alpha can be adjusted to give greater or lesser weight to the net boost
 
-        #alpha = 0.3
+        #alpha = 0.8
         #rank = alpha * search_rank + 1-alpha * boost_coeffcient
 
         return paper_list
