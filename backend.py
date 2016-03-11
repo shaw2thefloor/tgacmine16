@@ -6,11 +6,12 @@ import os
 import os.path
 import json
 import jsonpickle as pickle
+import input_classes
 
 class Backend:
 
 
-    def __init__(self):
+    def __init__(self, inputfolder):
         # first try and load saved network
         try:
             fileObject = open('neural_net.json','r')
@@ -18,6 +19,9 @@ class Backend:
             net = buildNetwork(2, 3, 1)
             fileObject = open('neural_net.json','w')
             pickle.dump(net, fileObject)
+        # access data
+        self.data = CProject(os.getcwd(), inputfolder)
+
 
     def get_net(self):
         fileObject = open('neural_net.json', 'w')
@@ -41,13 +45,16 @@ class Backend:
             will be used to update the classifier
         '''
         net = get_net()
+        fc = input_classes.FeatureClassification()
+
+        features = []
+        for _id in ids:
+            features.append(self.data.get_ctree(_id).get_classifier_features)
+        
 
 
-
-    def generate_test_data(self, inputfolder):
-        curdir = os.getcwd()
-        testdata = CProject(curdir, inputfolder)
-        for ctree in testdata.get_ctrees():
+    def generate_test_data(self):
+        for ctree in self.data.get_ctrees():
             yield ctree.get_classifier_features()
 
 
