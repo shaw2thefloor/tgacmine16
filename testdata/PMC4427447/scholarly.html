@@ -1,0 +1,2756 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+   <article xmlns="" xmlns:ali="http://www.niso.org/schemas/ali/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+      <head>
+         <style type="text/css"> 		 
+            	    table {background : #ffffdd;}
+            		 	tr {background : #ddddff; padding : 1px;}
+            			
+         </style>
+         <span class="citation_publisher">Public Library of Science</span>
+         <h2 class="citation-title">Morbidity Rate Prediction of Dengue Hemorrhagic Fever (DHF) Using the Support Vector
+            Machine and the Aedes aegypti Infection Rate in Similar Climates and Geographical
+            Areas
+         </h2>
+         <span class="doi">10.1371/journal.pone.0125049</span>
+         <div class="contrib-group">contrib: 
+            	  CONT
+            	  
+            <span class="citation_author">Kraisak Kesorn</span>
+            <span class="citation_author_institution_ref">1</span>
+            <span class="citation_author">Phatsavee Ongruk</span>
+            <span class="citation_author_institution_ref">1</span>
+            <span class="citation_author">Jakkrawarn Chompoosri</span>
+            <span class="citation_author_institution_ref">2</span>
+            <span class="citation_author">Atchara Phumee</span>
+            <span class="citation_author_institution_ref">3</span>
+            <span class="citation_author">Usavadee Thavara</span>
+            <span class="citation_author_institution_ref">2</span>
+            <span class="citation_author">Apiwat Tawatsin</span>
+            <span class="citation_author_institution_ref">2</span>
+            <span class="citation_author">Padet Siriyasatien</span>
+            <span class="citation_author_institution_ref">3</span>
+            	  CONT
+            	  
+            <div tagxxx="contrib">
+               <name>
+                  <span tagx="surname">Hwang</span>
+                  <span tagx="given-names">Jiang-Shiou</span>
+               </name>
+               <div tagxxx="role">Academic Editor</div>
+               <span ref-type="aff" rid="edit1"></span>
+            </div>
+         </div>
+         <span class="email">[kraisakk@nu.ac.th]</span>
+         <span class="conflict">[Competing Interests: The authors have declared that no competing interests exist.]</span>
+         <span class="contribs">[Conceived and designed the experiments: KK. Performed the experiments: KK. Analyzed
+            the data: KK. Contributed reagents/materials/analysis tools: KK PO JC AP UT AT PS.
+            Wrote the paper: KK PS. Designed the software used in analysis: KK PO.]
+         </span>
+         <span class="citation_pubdate">[2015-5-11]</span>
+         <span class="citation_copyright">[Copyright 2015: Kesorn et al]</span>
+         <span class="citation_licence">[Licence This is an open access article distributed under the terms of the Creative
+            Commons Attribution License, which permits unrestricted use, distribution, and reproduction
+            in any medium, provided the original author and source are credited]
+         </span>
+         <span class="citation_funding">[This research was supported by the National Research Council in Thailand, Project
+            no: Phor Khor/2555-125 and the National Science and Technology Development Agency
+            (Thailand) for a Research Chair Grant. The funders had no role in study design, data
+            collection and analysis, decision to publish, or preparation of the manuscript.]
+         </span>
+         <span class="citation_pagecount">[]</span>
+         <span class="citation_data">[Data AvailabilityThe data has been uploaded to Dryad for public sharing and you can
+            access the data using the following url: http://datadryad.org/review?doi=doi:10.5061/dryad.078bn.]
+         </span>
+         <div tagxxx="notes">
+            <title>Data Availability</title>
+            <p>The data has been uploaded to Dryad for public sharing and you can access the data
+               using the following url: 
+               <div tagxxx="ext-link">http://datadryad.org/review?doi=doi:10.5061/dryad.078bn</div>.
+            </p>
+         </div>
+      </head>
+      <div id="abstract" tag="abstract">
+         <h2>Abstract</h2>
+         <div tagxxx="sec">
+            <title>Background</title>
+            <p>In the past few decades, several researchers have proposed highly accurate prediction
+               models that have typically relied on climate parameters. However, climate factors
+               can be unreliable and can lower the effectiveness of prediction when they are applied
+               in locations where climate factors do not differ significantly. The purpose of this
+               study was to improve a dengue surveillance system in areas with similar climate by
+               exploiting the infection rate in the 
+               <i>Aedes aegypti</i> mosquito and using the support vector machine (SVM) technique for forecasting the
+               dengue morbidity rate.
+            </p>
+         </div>
+         <div tagxxx="sec">
+            <title>Methods and Findings</title>
+            <p>Areas with high incidence of dengue outbreaks in central Thailand were studied. The
+               proposed framework consisted of the following three major parts: 1) data integration,
+               2) model construction, and 3) model evaluation. We discovered that the 
+               <i>Ae</i>. 
+               <i>aegypti</i> female and larvae mosquito infection rates were significantly positively associated
+               with the morbidity rate. Thus, the increasing infection rate of female mosquitoes
+               and larvae led to a higher number of dengue cases, and the prediction performance
+               increased when those predictors were integrated into a predictive model. In this research,
+               we applied the SVM with the radial basis function (RBF) kernel to forecast the high
+               morbidity rate and take precautions to prevent the development of pervasive dengue
+               epidemics. The experimental results showed that the introduced parameters significantly
+               increased the prediction accuracy to 88.37% when used on the test set data, and these
+               parameters led to the highest performance compared to state-of-the-art forecasting
+               models.
+            </p>
+         </div>
+         <div tagxxx="sec">
+            <title>Conclusions</title>
+            <p>The infection rates of the 
+               <i>Ae</i>. 
+               <i>aegypti</i> female mosquitoes and larvae improved the morbidity rate forecasting efficiency better
+               than the climate parameters used in classical frameworks. We demonstrated that the
+               SVM-R-based model has high generalization performance and obtained the highest prediction
+               performance compared to classical models as measured by the accuracy, sensitivity,
+               specificity, and mean absolute error (MAE).
+            </p>
+         </div>
+      </div>
+      <div tagxxx="sec">
+         <title>Introduction</title>
+         <p>Dengue fever (DF) is one of the most important infectious diseases worldwide, particularly
+            in areas with tropical and sub-tropical climates [
+            <span ref-type="bibr" rid="pone.0125049.ref001">
+               <sup>
+                  <a href="#pone.0125049.ref001">1</a>
+               </sup>
+            </span>–
+            <span ref-type="bibr" rid="pone.0125049.ref003">
+               <sup>
+                  <a href="#pone.0125049.ref003">3</a>
+               </sup>
+            </span>]. DF is a viral vector-borne disease and is spread by the female 
+            <i>Aedes aegypti</i> mosquito [
+            <span ref-type="bibr" rid="pone.0125049.ref004">
+               <sup>
+                  <a href="#pone.0125049.ref004">4</a>
+               </sup>
+            </span>,
+            <span ref-type="bibr" rid="pone.0125049.ref005">
+               <sup>
+                  <a href="#pone.0125049.ref005">5</a>
+               </sup>
+            </span>]. In Thailand, dengue hemorrhagic fever (DHF) was first reported in 1949 [
+            <span ref-type="bibr" rid="pone.0125049.ref006">
+               <sup>
+                  <a href="#pone.0125049.ref006">6</a>
+               </sup>
+            </span>] and remains the country’s primary public health problem because no specific medical
+            treatments [
+            <span ref-type="bibr" rid="pone.0125049.ref007">
+               <sup>
+                  <a href="#pone.0125049.ref007">7</a>
+               </sup>
+            </span>] or effective vaccines [
+            <span ref-type="bibr" rid="pone.0125049.ref008">
+               <sup>
+                  <a href="#pone.0125049.ref008">8</a>
+               </sup>
+            </span>] exist to prevent dengue infections. Therefore, several scientists have undertaken
+            a massive endeavor to construct early warning systems using various predictors, statistical
+            techniques, and mathematical models to facilitate early public health responses to
+            reduce morbidity and mortality. Several factors are included in the models, including
+            climate variables, mosquito density, human populations, demographic transitions, places
+            (e.g., school, home, or hospital), and areas (e.g., towns and rural areas). Of these,
+            climate or weather variables, particularly rainfall and temperature, are the most
+            commonly used variables to increase the forecasting performance of predictive models
+            [
+            <span ref-type="bibr" rid="pone.0125049.ref005">
+               <sup>
+                  <a href="#pone.0125049.ref005">5</a>
+               </sup>
+            </span>,
+            <span ref-type="bibr" rid="pone.0125049.ref009">
+               <sup>
+                  <a href="#pone.0125049.ref009">9</a>
+               </sup>
+            </span>–
+            <span ref-type="bibr" rid="pone.0125049.ref013">
+               <sup>
+                  <a href="#pone.0125049.ref013">13</a>
+               </sup>
+            </span>]. Many works have indicated that higher rainfall results in a higher risk of dengue
+            virus transmission [
+            <span ref-type="bibr" rid="pone.0125049.ref014">
+               <sup>
+                  <a href="#pone.0125049.ref014">14</a>
+               </sup>
+            </span>–
+            <span ref-type="bibr" rid="pone.0125049.ref016">
+               <sup>
+                  <a href="#pone.0125049.ref016">16</a>
+               </sup>
+            </span>]. However, some studies have revealed that rainfall is significantly negatively associated
+            with dengue incidence because larvae and eggs can be washed away by massive rainfalls
+            [
+            <span ref-type="bibr" rid="pone.0125049.ref017">
+               <sup>
+                  <a href="#pone.0125049.ref017">17</a>
+               </sup>
+            </span>–
+            <span ref-type="bibr" rid="pone.0125049.ref019">
+               <sup>
+                  <a href="#pone.0125049.ref019">19</a>
+               </sup>
+            </span>]. In addition, the climate-based model may be less efficient in areas that are geographically
+            similar because these areas have only minor differences in temperature and rainfall.
+            Therefore, relying only on the weather variables can lead to lower reliability of
+            the model. Focks 
+            <i>et al</i>. [
+            <span ref-type="bibr" rid="pone.0125049.ref020">
+               <sup>
+                  <a href="#pone.0125049.ref020">20</a>
+               </sup>
+            </span>,
+            <span ref-type="bibr" rid="pone.0125049.ref021">
+               <sup>
+                  <a href="#pone.0125049.ref021">21</a>
+               </sup>
+            </span>] has constructed comprehensive models that take into account the majority factors
+            known to influence dengue epidemiology and introduced to use a new factor, a number
+            of 
+            <i>Ae</i>. 
+            <i>aegypti</i> paupae, for the prediction model. This study revealed that a number of 
+            <i>Ae</i>. 
+            <i>aegypti</i> paupae is more appropriate for assessing risk and directing control operations. Moreover,
+            
+            <i>Ae</i>. 
+            <i>aegypti</i> populations have been suggested for use in predicting dengue outbreaks [
+            <span ref-type="bibr" rid="pone.0125049.ref022">
+               <sup>
+                  <a href="#pone.0125049.ref022">22</a>
+               </sup>
+            </span>,
+            <span ref-type="bibr" rid="pone.0125049.ref023">
+               <sup>
+                  <a href="#pone.0125049.ref023">23</a>
+               </sup>
+            </span>]. Researchers have hypothesized that higher 
+            <i>Ae</i>. 
+            <i>aegypti</i> population densities result in higher dengue incidences. However, Goh et al. [
+            <span ref-type="bibr" rid="pone.0125049.ref024">
+               <sup>
+                  <a href="#pone.0125049.ref024">24</a>
+               </sup>
+            </span>] reported that a high number of dengue cases were found in Singapore even though
+            the 
+            <i>Ae</i>. 
+            <i>aegypti</i> populations decreased. This result indicates that 
+            <i>Ae</i>. 
+            <i>aegypti</i> populations are not positively related to the outbreaks. Therefore, we hypothesize
+            that the infection rate of the dengue virus in 
+            <i>Ae</i>. 
+            <i>aegypti</i> is significantly correlated with the outbreaks and can be used to enhance the effectiveness
+            of the morbidity rate prediction. Moreover, choosing the forecasting technique is
+            an important task for this study.
+         </p>
+         <p>Many classical forecasting techniques, such as the autoregressive integrated moving
+            average (ARIMA) [
+            <span ref-type="bibr" rid="pone.0125049.ref013">
+               <sup>
+                  <a href="#pone.0125049.ref013">13</a>
+               </sup>
+            </span>], the K-H model [
+            <span ref-type="bibr" rid="pone.0125049.ref025">
+               <sup>
+                  <a href="#pone.0125049.ref025">25</a>
+               </sup>
+            </span>], the seasonal autoregressive integrated moving average (SARIMA) [
+            <span ref-type="bibr" rid="pone.0125049.ref005">
+               <sup>
+                  <a href="#pone.0125049.ref005">5</a>
+               </sup>
+            </span>,
+            <span ref-type="bibr" rid="pone.0125049.ref012">
+               <sup>
+                  <a href="#pone.0125049.ref012">12</a>
+               </sup>
+            </span>,
+            <span ref-type="bibr" rid="pone.0125049.ref026">
+               <sup>
+                  <a href="#pone.0125049.ref026">26</a>
+               </sup>
+            </span>], the SVM [
+            <span ref-type="bibr" rid="pone.0125049.ref027">
+               <sup>
+                  <a href="#pone.0125049.ref027">27</a>
+               </sup>
+            </span>], a Poisson regression analysis [
+            <span ref-type="bibr" rid="pone.0125049.ref028">
+               <sup>
+                  <a href="#pone.0125049.ref028">28</a>
+               </sup>
+            </span>], and the artificial neural network (ANN) have been used to extrapolate dengue incidences
+            [
+            <span ref-type="bibr" rid="pone.0125049.ref029">
+               <sup>
+                  <a href="#pone.0125049.ref029">29</a>
+               </sup>
+            </span>]. Time series analysis methodologies, particularly ARIMA and SARIMA [
+            <span ref-type="bibr" rid="pone.0125049.ref026">
+               <sup>
+                  <a href="#pone.0125049.ref026">26</a>
+               </sup>
+            </span>], have been increasingly deployed in the field of epidemiological research on DF,
+            DHF, and many other infectious diseases. Typically, a time series analysis technique
+            involves homogeneous data over long periods. The main drawback of this method is that
+            it does not consider other variables that are associated with the dependent parameter.
+            Nonetheless, many research studies have revealed that the severity of dengue outbreaks
+            is influenced by several independent variables, and particularly by climate factors.
+            Therefore, a time series analysis may be less reliable because it only considers the
+            historical data of the dependent variable. The ANN has been widely used in biomedical
+            fields for data analysis and modeling, forecasting, and diagnostic classification.
+            For dengue outbreaks, the ANN has been used for noninvasive diagnosis of the risk
+            in dengue patients [
+            <span ref-type="bibr" rid="pone.0125049.ref008">
+               <sup>
+                  <a href="#pone.0125049.ref008">8</a>
+               </sup>
+            </span>, 
+            <span ref-type="bibr" rid="pone.0125049.ref023">
+               <sup>
+                  <a href="#pone.0125049.ref023">23</a>
+               </sup>
+            </span>] by exploiting four parameters (day of fever, reactance, gender, and the risk group
+            quantification) to classify patients into risk groups. The overall prediction accuracy
+            to perform such a task was 96.86%. Dengue outbreak prediction in Malaysia using the
+            ANN was proposed by Husin 
+            <i>et al</i> [
+            <span ref-type="bibr" rid="pone.0125049.ref030">
+               <sup>
+                  <a href="#pone.0125049.ref030">30</a>
+               </sup>
+            </span>]. The experiments showed that the ANN-based model outperformed a nonlinear regression
+            model, as measured by the mean square error (MSE). However, the ANN needs to determine
+            how many neurons are required for a task, and this is another issue that affects whether
+            the ANN is optimized. A new machine learning method, e.g., the SVM, has become more
+            attractive to researchers in the field. SVM is an efficient approach for nonlinear
+            classification problem solving. Benjamin 
+            <i>et al</i>. [
+            <span ref-type="bibr" rid="pone.0125049.ref031">
+               <sup>
+                  <a href="#pone.0125049.ref031">31</a>
+               </sup>
+            </span>] reported using the SVM to predict dengue incidence in Singapore and Bangkok using
+            a search query from Google and demonstrated that SVM models outperformed logistic
+            regressions for predicting high periods of dengue incidence. Similar to the work of
+            Shameem 
+            <i>et al</i>. [
+            <span ref-type="bibr" rid="pone.0125049.ref027">
+               <sup>
+                  <a href="#pone.0125049.ref027">27</a>
+               </sup>
+            </span>], the SVM displayed a more accurate predictive performance for dengue cases. The
+            SVM is an efficient technique based on statistical learning theory for nonlinear classification
+            problem solving and has been reported to be efficient in generalization performance;
+            the SVM has been implemented in various fields [
+            <span ref-type="bibr" rid="pone.0125049.ref032">
+               <sup>
+                  <a href="#pone.0125049.ref032">32</a>
+               </sup>
+            </span>]. The SVM can solve several problems of classification techniques such as the overfitting
+            problem and the curse of dimensionality. The SVM has been proven to provide more solutions
+            to boundaries compared to the neural network (NN) and can solve local minimum problems
+            found in the NN [
+            <span ref-type="bibr" rid="pone.0125049.ref033">
+               <sup>
+                  <a href="#pone.0125049.ref033">33</a>
+               </sup>
+            </span>].
+         </p>
+         <p>An effective prediction model of dengue outbreaks is of great importance to relevant
+            public health decision makers who are typically responsible for budgets and manpower.
+            Hence, this paper aimed to use the SVM to construct a predictive model for dengue
+            incidence using climate parameters and the newly discovered variable, the 
+            <i>Ae</i>. 
+            <i>aegypti</i> mosquito infection rate, which has never been used in any existing predictive models.
+         </p>
+      </div>
+      <div tagxxx="sec">
+         <title>Materials and Methods</title>
+         <div tagxxx="sec">
+            <h3>Study areas</h3>
+            <p>Three provinces (Nakhon Pathom, Ratchaburi, and Samut Sakhon) in the central region
+               of Thailand were selected for this experiment. In each province, data regarding 
+               <i>Ae</i>. 
+               <i>aegypti</i> larvae and adults were collected from 2007 to 2013. Nakhon Pathom is located at 13.9167°N,
+               100.1167°E and covers an area of 2,168.327 km
+               <sup>2</sup>. The population size is 882,184, and the population density is 406.85 people/km
+               <sup>2</sup>. Ratchaburi is located at 13.5289°N, 99.8144°E, and covers an area of 5,196.462 km
+               <sup>2</sup> with a population of 850,162 and a population density of 163.60 people/km
+               <sup>2</sup>. Samut Sakhon is located at 13.5472°N, 100.2736°E. The population size of Samut Sakhon
+               is 519,457 with an area of 872.347 km
+               <sup>2</sup>, corresponding to a high population density of 595.47 people/km
+               <sup>2</sup>. These provinces were selected for the following three major reasons: 1) a high DHF
+               morbidity rate as reported in Thailand health information system (
+               <div tagxxx="ext-link">www.hiso.in.th</div>), 2) a high mosquito density, and 3) a minor difference in climatic factors. Human
+               baiting was performed by officers with highly experience from National Institute of
+               Health, Thailand and the study was approved by the Ethic Committee of Research Affairs
+               Unit, Faculty of Medicine, Chulalongkorn University (COA No. 328/2014).
+            </p>
+         </div>
+         <div tagxxx="sec">
+            <h3>Key predictors for the proposed model</h3>
+            <p>Due to the high cost of collecting mosquito infection data, seasonal data collection
+               was performed at this stage of the experiment. Here, nine major contributors to dengue
+               epidemics, collected between 2007 and 2013, were included in the model. These are
+               temperature, rainfall, humidity, wind speed, 
+               <i>Ae</i>. 
+               <i>aegypti</i> larvae infection rate, male mosquito infection rate, female mosquito infection rate,
+               population density, and morbidity rate. All data required cleaning before being entered
+               into a model. This process included data transformation and the removal of missing
+               values. The values of the dengue virus infection rate in mosquitoes were obtained
+               from a previous report by Chompoosri 
+               <i>et al</i> [
+               <span ref-type="bibr" rid="pone.0125049.ref007">
+                  <sup>
+                     <a href="#pone.0125049.ref007">7</a>
+                  </sup>
+               </span>]. The 
+               <i>Ae</i>. 
+               <i>aegypti</i> larvae were collected from indoor clean water containers, and the adult mosquitoes
+               were collected using human bait twice a season between 2007 and 2012. The collected
+               larvae and mosquitoes were visually identified for 
+               <i>Ae</i>. 
+               <i>aegypti</i> species. Dengue virus was detected by pooling and storing all 
+               <i>Ae</i>. 
+               <i>aegypti</i> larvae and mosquitoes in cryogenic vials (5 larvae or mosquitoes/pool/vial) in liquid
+               nitrogen.
+            </p>
+         </div>
+         <div tagxxx="sec">
+            <h3>Predictive model construction based on SVM</h3>
+            <p>The SVM was first introduced in 1992 by Boser, Guyon, and Vapnik in COLT-92 [
+               <span ref-type="bibr" rid="pone.0125049.ref034">
+                  <sup>
+                     <a href="#pone.0125049.ref034">34</a>
+                  </sup>
+               </span>] and received much attention from researchers due to its tendency to have better
+               empirical performance. The SVM is a prediction tool that uses machine-learning theory
+               to maximize predictive accuracy while automatically avoiding overfitting of the data.
+               Three major components [
+               <span ref-type="bibr" rid="pone.0125049.ref035">
+                  <sup>
+                     <a href="#pone.0125049.ref035">35</a>
+                  </sup>
+               </span>] of the SVM include learning theory [
+               <span ref-type="bibr" rid="pone.0125049.ref036">
+                  <sup>
+                     <a href="#pone.0125049.ref036">36</a>
+                  </sup>
+               </span>], the optimal hyperplane algorithm [
+               <span ref-type="bibr" rid="pone.0125049.ref035">
+                  <sup>
+                     <a href="#pone.0125049.ref035">35</a>
+                  </sup>
+               </span>], and the kernel functions.
+            </p>
+            <p>Several kernel functions are used with the SVM. For instance, the linear kernel is
+               the simplest kernel function (
+               <span ref-type="disp-formula" rid="pone.0125049.e001">Eq 1</span>).
+            </p>
+            <div tagxxx="disp-formula">
+               <alternatives>
+                  <graphic></graphic>
+                  <div tagxxx="math">
+                     <div tagxxx="mrow">
+                        <div tagxxx="mtext">k</div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mo">(</div>
+                           <div tagxxx="mtext">x</div>
+                           <div tagxxx="mo">,</div>
+                           <div tagxxx="mtext">y</div>
+                           <div tagxxx="mo">)</div>
+                        </div>
+                        <div tagxxx="mo">=</div>
+                        <div tagxxx="mtext">x</div>
+                        <div tagxxx="mo">⋅</div>
+                        <div tagxxx="mtext">y</div>
+                        <div tagxxx="mo">+</div>
+                        <div tagxxx="mtext">c</div>
+                     </div>
+                  </div>
+               </alternatives>
+               <label>(1)</label>
+            </div>
+            <p>The polynomial kernel (
+               <span ref-type="disp-formula" rid="pone.0125049.e002">Eq 2</span>) is a classical method for non-linear modeling and is well fitted for problems when
+               all the training data are normalized.
+            </p>
+            <div tagxxx="disp-formula">
+               <alternatives>
+                  <graphic></graphic>
+                  <div tagxxx="math">
+                     <div tagxxx="mrow">
+                        <div tagxxx="mtext">k</div>
+                        <div tagxxx="mo">(</div>
+                        <div tagxxx="mtext">x</div>
+                        <div tagxxx="mo">,</div>
+                        <div tagxxx="mtext">y</div>
+                        <div tagxxx="mo">)</div>
+                        <div tagxxx="mo">=</div>
+                        <div tagxxx="msup">
+                           <div tagxxx="mrow">
+                              <div tagxxx="mo">(</div>
+                              <div tagxxx="mtext">x</div>
+                              <div tagxxx="mo">⋅</div>
+                              <div tagxxx="mtext">y</div>
+                              <div tagxxx="mo">)</div>
+                           </div>
+                           <div tagxxx="mtext">d</div>
+                        </div>
+                     </div>
+                  </div>
+               </alternatives>
+               <label>(2)</label>
+            </div>
+            <p>The radial basis function (RBF) kernel is one of the most powerful kernels (
+               <span ref-type="disp-formula" rid="pone.0125049.e003">Eq 3</span>).
+            </p>
+            <div tagxxx="disp-formula">
+               <alternatives>
+                  <graphic></graphic>
+                  <div tagxxx="math">
+                     <div tagxxx="mrow">
+                        <div tagxxx="mtext">k</div>
+                        <div tagxxx="mo">(</div>
+                        <div tagxxx="mtext">x</div>
+                        <div tagxxx="mo">,</div>
+                        <div tagxxx="mtext">y</div>
+                        <div tagxxx="mo">)</div>
+                        <div tagxxx="mo">=</div>
+                        <div tagxxx="mtext">exp</div>
+                        <div tagxxx="mrow">
+                           <div tagxxx="mo">[</div>
+                           <div tagxxx="mrow">
+                              <div tagxxx="mi">-</div>
+                              <div tagxxx="mfrac">
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="msup">
+                                       <div tagxxx="mrow">
+                                          <div tagxxx="mo">∥</div>
+                                          <div tagxxx="mtext">x-y</div>
+                                          <div tagxxx="mo">∥</div>
+                                       </div>
+                                       <div tagxxx="mn">2</div>
+                                    </div>
+                                 </div>
+                                 <div tagxxx="mrow">
+                                    <div tagxxx="msup">
+                                       <div tagxxx="mrow">
+                                          <div tagxxx="mn">2</div>
+                                          <div tagxxx="mi">σ</div>
+                                       </div>
+                                       <div tagxxx="mn">2</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div tagxxx="mo">]</div>
+                        </div>
+                     </div>
+                  </div>
+               </alternatives>
+               <label>(3)</label>
+            </div>
+            <p>These three kernels will be deployed in the dengue predictive model, and the highest
+               accuracy model will be selected.
+            </p>
+         </div>
+         <div tagxxx="sec">
+            <h3>Predictive model performance criteria</h3>
+            <p>Sensitivity, specificity, and accuracy were used to assess the effectiveness of the
+               proposed model. Sensitivity indicates the fraction of high-risk dengue outbreak areas
+               that are correctly classified, whereas specificity shows the fraction low-risk areas
+               that are correctly classified. These three measures are computed by the following
+               equations:
+               <div tagxxx="disp-formula">
+                  <alternatives>
+                     <graphic></graphic>
+                     <div tagxxx="math">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mtext">Sensitivity=</div>
+                           <div tagxxx="mfrac">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">TP</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">TP+FN</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </alternatives>
+                  <label>(4)</label>
+               </div>
+               <div tagxxx="disp-formula">
+                  <alternatives>
+                     <graphic></graphic>
+                     <div tagxxx="math">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mtext">Specificity=</div>
+                           <div tagxxx="mfrac">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">TN</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">TN+FP</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </alternatives>
+                  <label>(5)</label>
+               </div>
+               <div tagxxx="disp-formula">
+                  <alternatives>
+                     <graphic></graphic>
+                     <div tagxxx="math">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mtext">Accuracy=</div>
+                           <div tagxxx="mfrac">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">TP+TN</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">TP+TN+FP+FN</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </alternatives>
+                  <label>(6)</label>
+               </div>
+               where: True positive (TP) is the number of correctly classified high morbidity rates.
+            </p>
+            <p>True negative (TN) is the number of correctly classified low morbidity rates.</p>
+            <p>False positive (FP) is the number of incorrectly classified high morbidity rates.</p>
+            <p>False negative (FN) is the number of incorrectly classified low morbidity rates.</p>
+            <p>Ideally, a perfect predictor would be described as 100% sensitive (i.e., predicting
+               all areas from the high-risk group as being high risk) and 100% specific (i.e., not
+               predicting any areas from the high-risk group being low risk).
+            </p>
+         </div>
+         <div tagxxx="sec">
+            <h3>Definition 1: High morbidity rate of a dengue outbreak in Thailand</h3>
+            <p>The morbidity rate of the dengue outbreak in Thailand is defined as the number of
+               dengue cases per 100,000 population (
+               <span ref-type="disp-formula" rid="pone.0125049.e007">Eq 7</span>). The morbidity rate is high when it equals 50 or more; otherwise, the rate is classified
+               as low.
+            </p>
+            <div tagxxx="disp-formula">
+               <alternatives>
+                  <graphic></graphic>
+                  <div tagxxx="math">
+                     <div tagxxx="mrow">
+                        <div tagxxx="mtext">Morbidity rate=</div>
+                        <div tagxxx="mfrac">
+                           <div tagxxx="mrow">
+                              <div tagxxx="mtext">dengue case</div>
+                              <div tagxxx="mo">×</div>
+                              <div tagxxx="mn">100,000</div>
+                           </div>
+                           <div tagxxx="mrow">
+                              <div tagxxx="mtext">population density</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </alternatives>
+               <label>(7)</label>
+            </div>
+         </div>
+         <div tagxxx="sec">
+            <h3>Methodology</h3>
+            <p>To develop a predictive model for dengue outbreaks, three main processes are defined
+               as illustrated in 
+               <span ref-type="fig" rid="pone.0125049.g001">Fig 1</span> and can be explained as follows:
+            </p>
+            <ul>
+               <li>
+                  <p>
+                     <b>
+                        <i>Data integration</i>
+                     </b>: All data from several sources, as shown in 
+                     <span ref-type="table" rid="pone.0125049.t001">
+                        <a href="#pone.0125049.t001">Table 1</a>
+                     </span>, were collected and integrated into a unified data storage system. Before feeding
+                     the collected data into a forecasting model, the data were extensively processed by
+                     data cleaning, transformation, categorization, and scaling. As a result, 648 samples
+                     remained.
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <b>
+                        <i>Model construction</i>
+                     </b>: Two well-known data mining techniques were applied for the prediction task, the
+                     K-nearest neighbor (
+                     <i>KNN</i>), the decision tree (DT), the NN, and the SVM with different kernels. These supervised
+                     classification algorithms were deployed in the models, and the predicted results were
+                     compared and analyzed. The SVM was selected because it has been proven to provide
+                     a better performance and processing time compared to the NN and has a good generalization
+                     performance [
+                     <span ref-type="bibr" rid="pone.0125049.ref038">
+                        <sup>
+                           <a href="#pone.0125049.ref038">38</a>
+                        </sup>
+                     </span>].
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <b>
+                        <i>Predicted result evaluation</i>
+                     </b>: The predicted results will be compared to the observed data to assess the constructed
+                     model using all measures addressed in Eqs 
+                     <span ref-type="disp-formula" rid="pone.0125049.e004">4</span>–
+                     <span ref-type="disp-formula" rid="pone.0125049.e006">6</span>. In addition, a 10-fold cross-validation approach was exploited to measure the proposed
+                     model effectiveness. The cross-validation procedure can prevent the problem of overfitting.
+                     Because changing the parameters of the SVM directly affects the values of sensitivity,
+                     specificity, and overall accuracy, it is important to determine the optimal parameters
+                     to obtain the highest accuracy with a good sensitivity and specificity.
+                  </p>
+               </li>
+            </ul>
+            <p>
+               <span ref-type="table" rid="pone.0125049.t001">
+                  <a href="#pone.0125049.t001">Table 1</a>
+               </span> lists the variables considered in the proposed forecasting model. The values of all
+               variables were collected between 2007 and 2013
+            </p>
+            <fig>
+               <div tagxxx="object-id">10.1371/journal.pone.0125049.g001</div>
+               <label>Fig 1</label>
+               <caption>
+                  <title>The experimental processes.</title>
+                  <p>The following three experimental processes are conducted: 1) data integration, 2)
+                     predictive model construction using Weka [
+                     <span ref-type="bibr" rid="pone.0125049.ref037">
+                        <sup>
+                           <a href="#pone.0125049.ref037">37</a>
+                        </sup>
+                     </span>], and 3) result evaluation using sensitivity, specificity, and overall accuracy.
+                  </p>
+               </caption>
+               <graphic></graphic>
+            </fig>
+            <div id="pone.0125049.t001">
+               <div tagxxx="object-id">10.1371/journal.pone.0125049.t001</div>
+               <label>Table 1</label>
+               <caption>
+                  <title>Independent and dependent variables collected from various sources and used in the
+                     proposed forecasting model.
+                  </title>
+               </caption>
+               <alternatives>
+                  <graphic></graphic>
+                  <table>
+                     <colgroup>
+                        <col></col>
+                        <col></col>
+                        <col></col>
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th>Variables</th>
+                           <th>Sources</th>
+                           <th>Unit</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>1. Temperature</td>
+                           <td>Thai Meteorological Department</td>
+                           <td>Celsius (C)</td>
+                        </tr>
+                        <tr>
+                           <td>2. Rainfall</td>
+                           <td>Thai Meteorological Department</td>
+                           <td>Millimeters (mm)</td>
+                        </tr>
+                        <tr>
+                           <td>3. Humidity</td>
+                           <td>Thai Meteorological Department</td>
+                           <td>Percentage (%)</td>
+                        </tr>
+                        <tr>
+                           <td>4. Wind (speed)</td>
+                           <td>Thai Meteorological Department</td>
+                           <td>Miles per hour (mph)</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <i>5</i>. 
+                              <i>Ae</i>. 
+                              <i>aegypti</i> larvae infection rate
+                           </td>
+                           <td>Parasitology Department, Chulalongkorn University</td>
+                           <td>Percentage (%)</td>
+                        </tr>
+                        <tr>
+                           <td>6. Female mosquito infection rate</td>
+                           <td>Parasitology Department, Chulalongkorn University</td>
+                           <td>Percentage (%)</td>
+                        </tr>
+                        <tr>
+                           <td>7. Male mosquito infection rate</td>
+                           <td>Parasitology Department, Chulalongkorn University</td>
+                           <td>Percentage (%)</td>
+                        </tr>
+                        <tr>
+                           <td>8. Population density</td>
+                           <td>Ministry of Interior</td>
+                           <td>People</td>
+                        </tr>
+                        <tr>
+                           <td>9. Dengue cases (
+                              <i>later used to compute morbidity rate</i>)
+                           </td>
+                           <td>National Trustworthy and Competent Authority Epidemiological Surveillance and Investigation
+                              Department (NTCAESI)
+                           </td>
+                           <td>Cases</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </alternatives>
+            </div>
+            <p>
+               <span ref-type="table" rid="pone.0125049.t002">
+                  <a href="#pone.0125049.t002">Table 2</a>
+               </span> demonstrates more details of the three proposed processes in 
+               <span ref-type="fig" rid="pone.0125049.g001">Fig 1</span>. The data cleaning involved amending or removing data that were incorrect, incomplete,
+               improperly formatted, or duplicated. These data should be removed from the model because
+               they can lower the classification or forecasting power. Because data come from various
+               sources, their format and structure are often different and not ready to be processed.
+               Therefore, they need to be restructured into a format that the SVM tools can execute.
+               In this experiment, all data were transformed into a CSV format. In addition, both
+               techniques require that each data point is represented as a vector of a real number.
+               Hence, a categorical variable, e.g., province and season, must be converted into a
+               numerical value. Here, season was converted into 
+               <i>m</i> numbers to represent the 
+               <i>m</i>-season attribute. Only one of the 
+               <i>m</i> numbers is one, and others are zero. For example, a three-season attribute, such
+               as summer, rainy, and winter, can be represented as (1,0,0), (0,1,0), and (0,0,1).
+               This representation is more stable than using a single number, e.g., 1, 2, and 3,
+               as suggested by Hsu 
+               <i>et al</i> [
+               <span ref-type="bibr" rid="pone.0125049.ref039">
+                  <sup>
+                     <a href="#pone.0125049.ref039">39</a>
+                  </sup>
+               </span>].
+            </p>
+            <div id="pone.0125049.t002">
+               <div tagxxx="object-id">10.1371/journal.pone.0125049.t002</div>
+               <label>Table 2</label>
+               <caption>
+                  <title>Experimental procedure.</title>
+               </caption>
+               <alternatives>
+                  <graphic></graphic>
+                  <table>
+                     <colgroup>
+                        <col></col>
+                     </colgroup>
+                     <tbody>
+                        <tr>
+                           <td>1: Data cleaning: e.g., removing missing values</td>
+                        </tr>
+                        <tr>
+                           <td>2: Formatting data to for SVM and Poisson regression, e.g., CSV</td>
+                        </tr>
+                        <tr>
+                           <td>3: Categorizing the features of a model</td>
+                        </tr>
+                        <tr>
+                           <td>4: Conducting simple scaling (standardization) of the features</td>
+                        </tr>
+                        <tr>
+                           <td>5: Applying the forecasting techniques using:</td>
+                        </tr>
+                        <tr>
+                           <td>    1) K-Nearest Neighbor (
+                              <i>KNN</i>)
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>    2) Decision Tree (DT)</td>
+                        </tr>
+                        <tr>
+                           <td>    3) Neural Network (NN)</td>
+                        </tr>
+                        <tr>
+                           <td>    4) Support Vector Machine using Linear kernel (SVM-L)</td>
+                        </tr>
+                        <tr>
+                           <td>    5) Support Vector Machine using Polynomial kernel (SVM-P)</td>
+                        </tr>
+                        <tr>
+                           <td>    6) Support Vector Machine using Radial basis function kernel (SVM-R)</td>
+                        </tr>
+                        <tr>
+                           <td>6: Evaluating all models using these measures:</td>
+                        </tr>
+                        <tr>
+                           <td>    1) Sensitivity, specificity, and overall accuracy</td>
+                        </tr>
+                        <tr>
+                           <td>    2) 10-fold cross-validation</td>
+                        </tr>
+                        <tr>
+                           <td>7: Selecting the best model</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </alternatives>
+            </div>
+            <p>Data scaling refers to the method used to normalize the range of features or independent
+               variables of a data mining model. This approach can ensure that data are not overwhelmed
+               by each other in terms of distance measures [
+               <span ref-type="bibr" rid="pone.0125049.ref033">
+                  <sup>
+                     <a href="#pone.0125049.ref033">33</a>
+                  </sup>
+               </span>]. We used a standardization technique (
+               <span ref-type="disp-formula" rid="pone.0125049.e008">Eq 8</span>) to rescale both the training and testing data:
+               
+               <div tagxxx="disp-formula">
+                  <alternatives>
+                     <graphic></graphic>
+                     <div tagxxx="math">
+                        <div tagxxx="mrow">
+                           <div tagxxx="mtext">x</div>
+                           <div tagxxx="mo">′</div>
+                           <div tagxxx="mo">=</div>
+                           <div tagxxx="mfrac">
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">x-mean</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">f</div>
+                                 <div tagxxx="mo">)</div>
+                              </div>
+                              <div tagxxx="mrow">
+                                 <div tagxxx="mtext">stddev</div>
+                                 <div tagxxx="mo">(</div>
+                                 <div tagxxx="mi">f</div>
+                                 <div tagxxx="mo">)</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </alternatives>
+                  <label>(8)</label>
+               </div>
+               where 
+               <i>x</i>′ is a standardized value, 
+               <i>x</i> is an original value, and 
+               <i>mean</i> and 
+               <i>stddev</i> are a median and a standard deviation value of each feature (
+               <i>f</i>), respectively.
+            </p>
+            <p>Having scaled the data, they are ready to be processed by the techniques mentioned
+               in step 5 of 
+               <span ref-type="table" rid="pone.0125049.t002">
+                  <a href="#pone.0125049.t002">Table 2</a>
+               </span>; the results of each model will be assessed by sensitivity, specificity, and accuracy.
+               Finally, the model that best optimizes those measures is selected.
+            </p>
+         </div>
+      </div>
+      <div tagxxx="sec">
+         <title>Results</title>
+         <div tagxxx="sec">
+            <h3>Mosquito infection rate and observed data analysis</h3>
+            <p>We hypothesized that the 
+               <i>Ae</i>. 
+               <i>aegypti</i> infection rate was associated with the morbidity rate of dengue outbreaks. Therefore,
+               we initially studied the relationship between these parameters by plotting the line
+               charts, as shown in 
+               <span ref-type="fig" rid="pone.0125049.g002">Fig 2</span>, compared to the plot of the observed dengue cases. The line chart in 
+               <span ref-type="fig" rid="pone.0125049.g002">Fig 2 (A) and 2 (C)</span> demonstrates that the trends of observed dengue cases and female mosquito infection
+               rates fluctuated similarly. These trends show that they were positively correlated
+               with the observed dengue cases. In contrast, the infected male mosquitoes and the
+               dengue cases are divergent, and thus, they are potentially not associated with each
+               other. The climate factors seemed to be less associated with the observed data, except
+               for the rainfall amount (
+               <span ref-type="fig" rid="pone.0125049.g002">Fig 2D</span>). More discussion about this can be found in the Discussion.
+            </p>
+            <fig>
+               <div tagxxx="object-id">10.1371/journal.pone.0125049.g002</div>
+               <label>Fig 2</label>
+               <caption>
+                  <title>The trends of four predictors, dengue cases, and the infection rates of female, male,
+                     and larvae mosquitoes, are plotted and compared.
+                  </title>
+                  <p>This figure illustrates the trends of four parameters in Nakhon Pathom. The trends
+                     of these parameters in the other two provinces (Ratchaburi and Samut Sakhon) are similar
+                     but are not shown due to space limitations.
+                  </p>
+               </caption>
+               <graphic></graphic>
+            </fig>
+         </div>
+         <div tagxxx="sec">
+            <h3>Prediction performance evaluation</h3>
+            <div tagxxx="sec">
+               <h3>Data scaling performance study</h3>
+               <p>Because different data attributes have different numeric ranges, greater numeric ranges
+                  can dominate those with smaller numeric ranges. Thus, scaling techniques are required
+                  to resolve this problem. Another benefit of scaling is that it avoids numerical difficulties
+                  during calculations. Because SVM kernel values usually depend on the inner products
+                  of feature vectors, e.g., the linear kernel (
+                  <span ref-type="disp-formula" rid="pone.0125049.e001">Eq 1</span>) and the polynomial kernel (
+                  <span ref-type="disp-formula" rid="pone.0125049.e002">Eq 2</span>), large attribute values might cause numerical problems [
+                  <span ref-type="bibr" rid="pone.0125049.ref039">
+                     <sup>
+                        <a href="#pone.0125049.ref039">39</a>
+                     </sup>
+                  </span>] and result in high computational costs. 
+                  <span ref-type="table" rid="pone.0125049.t003">
+                     <a href="#pone.0125049.t003">Table 3</a>
+                  </span> demonstrates the forecasting power of three SVM techniques, SVM-Linear (SVM-L), SVM-Polynomial
+                  (SVM-P), and SVM-RBF (SVM-R), and the computational time required to construct a model
+                  using unscaled and scaled data. SVM-L and SVM-P require 30.2201 and 595.5434 seconds,
+                  respectively, whereas SVM-R requires only 0.0135 seconds to construct the model. There
+                  is a dramatic decrease in the computational time of SVM-L and SVM-P when the data
+                  are scaled (0.0147 and 0.0183, respectively), and the prediction powers are also improved.
+               </p>
+               <div id="pone.0125049.t003">
+                  <div tagxxx="object-id">10.1371/journal.pone.0125049.t003</div>
+                  <label>Table 3</label>
+                  <caption>
+                     <title>The effect of scaled and unscaled data on prediction performance and model construction
+                        time.
+                     </title>
+                  </caption>
+                  <alternatives>
+                     <graphic></graphic>
+                     <table>
+                        <colgroup>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                        </colgroup>
+                        <thead>
+                           <tr>
+                              <th>Dataset</th>
+                              <th>Kernels</th>
+                              <th>Sensitivity</th>
+                              <th>Specificity</th>
+                              <th>Accuracy</th>
+                              <th>Time to construct a model (seconds)</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>
+                                 <b>Unscaled</b>
+                              </td>
+                              <td>SVM-L</td>
+                              <td>1</td>
+                              <td>0.316</td>
+                              <td>75.930</td>
+                              <td>30.2201</td>
+                           </tr>
+                           <tr>
+                              <td>SVM-P</td>
+                              <td>1</td>
+                              <td>0.684</td>
+                              <td>88.890</td>
+                              <td>595.5434</td>
+                           </tr>
+                           <tr>
+                              <td>SVM-R</td>
+                              <td>1</td>
+                              <td>0.373</td>
+                              <td>90.741</td>
+                              <td>0.0135</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <b>Scaled</b>
+                              </td>
+                              <td>SVM-L</td>
+                              <td>1</td>
+                              <td>0.474</td>
+                              <td>81.482</td>
+                              <td>0.0147</td>
+                           </tr>
+                           <tr>
+                              <td>SVM-P</td>
+                              <td>0.882</td>
+                              <td>0.789</td>
+                              <td>90.740</td>
+                              <td>0.0183</td>
+                           </tr>
+                           <tr>
+                              <td>SVM-R</td>
+                              <td>0.947</td>
+                              <td>0.947</td>
+                              <td>96.296</td>
+                              <td>0.0119</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </alternatives>
+               </div>
+               <p>Noticeably, the results from the testing in 
+                  <span ref-type="table" rid="pone.0125049.t003">
+                     <a href="#pone.0125049.t003">Table 3</a>
+                  </span> showed that the highest prediction accuracy, sensitivity, and specificity were found
+                  in the RBF kernel with scaled data. Thus, SVM-R was chosen as the main model for morbidity
+                  rate prediction in this study.
+               </p>
+            </div>
+            <div tagxxx="sec">
+               <h3>SVM with RBF kernel parameter analysis</h3>
+               <p>There are two parameters for the RBF kernel: 
+                  <i>C</i> and 
+                  <i>σ</i>
+                  <sup>2</sup>, in which 
+                  <i>C</i> is the parameter for regularization, determining the trade-off between the fitting
+                  error minimization and the smoothness of the estimated function. The second parameter,
+                  
+                  <i>σ</i>
+                  <sup>2</sup>, is the kernel function parameter. There is no a structural way to select the optimal
+                  values of 
+                  <i>C</i> and 
+                  <i>σ</i>
+                  <sup>2</sup> for a given problem. This method is called a 
+                  <i>grid search</i> and involves numerous trials and errors [
+                  <span ref-type="bibr" rid="pone.0125049.ref038">
+                     <sup>
+                        <a href="#pone.0125049.ref038">38</a>
+                     </sup>
+                  </span>]. This section aims at investigating the effect of those two parameters on the performance
+                  of the RBF-based prediction model by varying one parameter at a time.
+               </p>
+               <p>Various pairs of (
+                  <i>C</i>, 
+                  <i>σ</i>
+                  <sup>2</sup>) values were tried, and the one with the best accuracy was selected. 
+                  <span ref-type="fig" rid="pone.0125049.g003">Fig 3</span> shows the evaluation parameter values at various values of 
+                  <i>σ</i>
+                  <sup>2</sup> in which 
+                  <i>C</i> is fixed at 1.0 (default value). 
+                  <span ref-type="fig" rid="pone.0125049.g003">Fig 3(A)</span> illustrates the results for determining the optimal value of 
+                  <i>σ</i>
+                  <sup>2</sup>. The values of 
+                  <i>σ</i>
+                  <sup>2</sup> were varied exponentially from 2
+                  <sup>–8</sup>, 2
+                  <sup>–7</sup>, 2
+                  <sup>–6</sup>,…, 2
+                  <sup>1</sup> (the mean absolute error [MAE] and prediction accuracy remained steady afterwards).
+                  The figure shows that the lowest MAE value of 0.0926 and the highest prediction accuracy
+                  of 90.74% were obtained when 
+                  <i>σ</i>
+                  <sup>2</sup> was 0.1250 (2
+                  <sup>–3</sup>). This value was selected as the optimal value of 
+                  <i>σ</i>
+                  <sup>2</sup> and was used to determine the optimal value for 
+                  <i>C</i>. 
+                  <span ref-type="fig" rid="pone.0125049.g003">Fig 3(B)</span> shows the results of various values of 
+                  <i>C</i> when 
+                  <i>σ</i>
+                  <sup>2</sup> was chosen to be 0.1250 based on the previous experiment. The value of 
+                  <i>C</i> was varied from 2
+                  <sup>–5</sup> to 2
+                  <sup>4</sup>. A 
+                  <i>C</i> value of 8 (2
+                  <sup>3</sup>), in which the MAE and the prediction accuracy remained steady afterwards, was chosen
+                  because it produced the highest predictive accuracy (96.296%) and the lowest MAE (0.037).
+                  Based on these results, the optimal SVM-RBF predictive model was defined by a value
+                  of C equal to 8 and a value of 
+                  <i>σ</i>
+                  <sup>2</sup> equal to 0.1250 using 10-fold cross validation.
+               </p>
+               <fig>
+                  <div tagxxx="object-id">10.1371/journal.pone.0125049.g003</div>
+                  <label>Fig 3</label>
+                  <caption>
+                     <title>The prediction performance comparison based on the MAE and forecasting accuracy.</title>
+                     <p>Fig 3 (A) shows the MAE and the prediction accuracy with varying values of 
+                        <i>σ</i>
+                        <sup>2</sup> while C was fixed. In contrast, the value of C was varied and 
+                        <i>σ</i>
+                        <sup>2</sup> was fixed in Fig 3 (B) to determine the optimal values for the MAE and prediction
+                        accuracy.
+                     </p>
+                  </caption>
+                  <graphic></graphic>
+               </fig>
+            </div>
+            <div tagxxx="sec">
+               <h3>Significance of the female mosquito and 
+                  <i>Ae</i>. 
+                  <i>Aegypti</i> larvae infection rate features
+               </h3>
+               <p>This experiment aimed to study the significance of two new features found by the data
+                  analysis in 
+                  <span ref-type="fig" rid="pone.0125049.g002">Fig 2</span>: the female mosquito and larvae infection rates. Two models were constructed to compare
+                  the predicted results. The first prediction model applied all nine attributes addressed
+                  in 
+                  <span ref-type="table" rid="pone.0125049.t001">
+                     <a href="#pone.0125049.t001">Table 1</a>
+                  </span>, while the second model eliminated the two new variables to study the effect of the
+                  two new parameters. Both models deployed three classification techniques, SVM-L, SVM-P,
+                  and SVM-R. The predicted performances were assessed by three measures (Eqs 
+                  <span ref-type="disp-formula" rid="pone.0125049.e004">4</span>–
+                  <span ref-type="disp-formula" rid="pone.0125049.e006">6</span>) and illustrated in 
+                  <span ref-type="table" rid="pone.0125049.t004">
+                     <a href="#pone.0125049.t004">Table 4</a>
+                  </span>. The candidate models were trained using the 2007–2013 data. To choose between those
+                  techniques, the model with the highest accuracy was determined. As shown in 
+                  <span ref-type="table" rid="pone.0125049.t004">
+                     <a href="#pone.0125049.t004">Table 4</a>
+                  </span>, all techniques in the first model yielded a higher prediction performance in terms
+                  of sensitivity, specificity, and accuracy than in the second model. This result suggests
+                  that the omitted infected female mosquito and infected larvae variables significantly
+                  affected the prediction performance. It was noted that the SVM-R had the highest prediction
+                  accuracy, up to 96.296%, among all the models. Therefore, this confirms the superior
+                  predictive power of the RBF kernel of SVM compared to other kernels using optimal
+                  parameters from the previous experiment of this study.
+               </p>
+               <div id="pone.0125049.t004">
+                  <div tagxxx="object-id">10.1371/journal.pone.0125049.t004</div>
+                  <label>Table 4</label>
+                  <caption>
+                     <title>Prediction performance comparisons of five techniques of two models.</title>
+                  </caption>
+                  <alternatives>
+                     <graphic></graphic>
+                     <table>
+                        <colgroup>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                           <col></col>
+                        </colgroup>
+                        <thead>
+                           <tr>
+                              <th>Techniques</th>
+                              <th>1
+                                 <sup>st</sup> Model
+                              </th>
+                              <th>2
+                                 <sup>nd</sup> Model
+                              </th>
+                           </tr>
+                           <tr>
+                              <th>Sensitivity</th>
+                              <th>Specificity</th>
+                              <th>Accuracy (%)</th>
+                              <th>Sensitivity</th>
+                              <th>Specificity</th>
+                              <th>Accuracy (%)</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>
+                                 <b>SVM-L</b>
+                              </td>
+                              <td>0.579</td>
+                              <td>1</td>
+                              <td>85.185</td>
+                              <td>0.474</td>
+                              <td>1</td>
+                              <td>81.482</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <b>SVM-P</b>
+                              </td>
+                              <td>0.737</td>
+                              <td>1</td>
+                              <td>90.74</td>
+                              <td>0.684</td>
+                              <td>0.929</td>
+                              <td>87.037</td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <b>SVM-R</b>
+                              </td>
+                              <td>
+                                 <b>
+                                    <i>0</i>.
+                                    <i>947</i>
+                                 </b>
+                              </td>
+                              <td>
+                                 <b>
+                                    <i>0</i>.
+                                    <i>947</i>
+                                 </b>
+                              </td>
+                              <td>
+                                 <b>
+                                    <i>96</i>.
+                                    <i>296</i>
+                                 </b>
+                              </td>
+                              <td>
+                                 <b>
+                                    <i>0</i>.
+                                    <i>882</i>
+                                 </b>
+                              </td>
+                              <td>
+                                 <b>
+                                    <i>0</i>.
+                                    <i>789</i>
+                                 </b>
+                              </td>
+                              <td>
+                                 <b>
+                                    <i>90</i>.
+                                    <i>740</i>
+                                 </b>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </alternatives>
+               </div>
+            </div>
+            <div tagxxx="sec">
+               <h3>Comparing the chosen model with classical forecasting techniques</h3>
+               <p>The purpose of the following experiment was to compare the SVM-R model with the other
+                  SVM kernels as well as other state-of-the-art classification techniques (
+                  <span ref-type="fig" rid="pone.0125049.g004">Fig 4</span>), such as the 
+                  <i>KNN</i>, DT, and standard back propagation NN. These techniques are popular and have been
+                  applied in several research areas such as image processing, business data mining,
+                  and medicine. The collected data were completely separated (no overlapping instances)
+                  into a training set and a test set. To avoid model overfitting, a 10-fold cross validation
+                  was deployed. 
+                  <span ref-type="fig" rid="pone.0125049.g005">Fig 5</span> shows the values of sensitivity and specificity of all techniques, whereas 
+                  <span ref-type="fig" rid="pone.0125049.g005">Fig 5</span> demonstrates the minimum, average, and maximum values of prediction accuracy obtained
+                  from the test set of the six forecasting models as well as the average accuracy yielded
+                  from the training set (train-max). The square boxes in 
+                  <span ref-type="fig" rid="pone.0125049.g005">Fig 5</span> indicate the predictive accuracy differences between the training set and the test
+                  set. The SVM-R was superior to the other techniques because it obtained the highest
+                  sensitivity (0.8747) and specificity (0.8747), as shown in 
+                  <span ref-type="fig" rid="pone.0125049.g005">Fig 5</span>, resulting in achieving a prediction accuracy of 96.26% in the training set and 88.37%
+                  in the test set.
+               </p>
+               <fig>
+                  <div tagxxx="object-id">10.1371/journal.pone.0125049.g004</div>
+                  <label>Fig 4</label>
+                  <caption>
+                     <title>Prediction performance comparison based on specificity and sensitivity of the six
+                        models.
+                     </title>
+                     <p>A higher specificity and sensitivity suggest a better prediction efficiency. Among
+                        the evaluated models, the SVM-R obtained the highest prediction performance by achieving
+                        sensitivity and specificity of 0.8747 using a 10-fold cross-validation performed on
+                        the test set data.
+                     </p>
+                  </caption>
+                  <graphic></graphic>
+               </fig>
+               <fig>
+                  <div tagxxx="object-id">10.1371/journal.pone.0125049.g005</div>
+                  <label>Fig 5</label>
+                  <caption>
+                     <title>Prediction performance comparison based on the maximum, average, and minimum accuracy
+                        of the six models compared with the accuracy of the training set.
+                     </title>
+                     <p>The experiment was conducted 10 times using 10-fold cross-validation performed on
+                        the training set and the test set data using the SVM-L, SVM-P, SVM-R, NN, DT, and
+                        
+                        <i>KNN</i> techniques. All the collected results were averaged.
+                     </p>
+                  </caption>
+                  <graphic></graphic>
+               </fig>
+            </div>
+         </div>
+      </div>
+      <div tagxxx="sec">
+         <title>Discussion</title>
+         <p>The results of this study illustrated that the infection rates in female mosquitoes
+            and larvae influenced the number of dengue cases in three provinces of Thailand. 
+            <span ref-type="fig" rid="pone.0125049.g002">Fig 2(A)</span> indicates that the female mosquito infection rate is strongly related to the number
+            of observed dengue cases because they have similar line chart trends and because female
+            mosquitoes typically forage and bite humans. Transovarially infected mosquitoes are
+            known to be capable of transmitting the virus through biting [
+            <span ref-type="bibr" rid="pone.0125049.ref040">
+               <sup>
+                  <a href="#pone.0125049.ref040">40</a>
+               </sup>
+            </span>]. Thus, a higher female mosquito infection rate results in higher biting activity
+            rates, and, consequently, more dengue cases. In contrast to 
+            <span ref-type="fig" rid="pone.0125049.g002">Fig 2(B)</span>, the dengue cases were not clearly associated with the male mosquito infection rate
+            because their trends were divergent. Male mosquitoes do not hunt; therefore, the number
+            of dengue cases may not be linked to the male mosquito infection rate. 
+            <span ref-type="fig" rid="pone.0125049.g002">Fig 2(C)</span> revealed that the high infection rate of 
+            <i>Ae</i>. 
+            <i>aegypti</i> larvae mosquitoes found in the summer was correlated to the high number of dengue
+            cases in the following rainy season. When the infection rate of larvae declines, the
+            morbidity rate is also lower. This phenomenon occurs repeatedly every year because
+            a high infection rate of larvae in the summer leads to a high infection rate of female
+            mosquitoes in the following rainy season. This result supports the report of Scott
+            
+            <i>et al</i>. [
+            <span ref-type="bibr" rid="pone.0125049.ref041">
+               <sup>
+                  <a href="#pone.0125049.ref041">41</a>
+               </sup>
+            </span>] regarding the largest female populations being present in the rainy season (May-June)
+            in Thailand. As a result, the biting activity rate for female mosquitoes increases
+            and, consequently, more dengue cases occur. Thus, the larva infection rate in the
+            summer was also positively correlated with the number of observed cases in the following
+            rainy season. This discovery is very useful because it is a significant signal that
+            indicates the severity of dengue outbreaks in the near future. In other words, if
+            we know the infection rate of 
+            <i>Ae</i>. 
+            <i>aegypti</i> larvae in the summer, we can effectively predict the dengue incidence in the following
+            rainy season. The amount of rainfall also seems to be associated with the number of
+            cases, which results in a pattern that is similar to the pattern for the number of
+            dengue cases, as shown in 
+            <span ref-type="fig" rid="pone.0125049.g002">Fig 2</span> (D). The large volumes of standing water on private properties can revive mosquito
+            eggs and subsequently create a surge in the emergence of infected mosquitoes. While
+            some studies [
+            <span ref-type="bibr" rid="pone.0125049.ref005">
+               <sup>
+                  <a href="#pone.0125049.ref005">5</a>
+               </sup>
+            </span>,
+            <span ref-type="bibr" rid="pone.0125049.ref012">
+               <sup>
+                  <a href="#pone.0125049.ref012">12</a>
+               </sup>
+            </span>] have reported that climate variables play a key role in transmission during outbreaks,
+            the data shown in 
+            <span ref-type="fig" rid="pone.0125049.g002">Fig 2E–2G</span> seem negatively associated with the observed number of dengue cases. This result
+            occurs primarily because the studied areas are geographically similar, and thus, those
+            climate factors are not very different. Therefore, the biting activity rates of the
+            
+            <i>Ae</i>. 
+            <i>aegypti</i> females in the studied areas are similar. As such, using only climate factors will
+            lead to poorly predictive results.
+         </p>
+         <p>
+            <span ref-type="table" rid="pone.0125049.t003">
+               <a href="#pone.0125049.t003">Table 3</a>
+            </span> shows the importance of using the scaling method before forecasting data using various
+            SVM kernels. The SVM-L and SVM-P suffered from high computational costs compared to
+            the SVM-R because both SVM kernels depend on inner products of feature vectors (Eq
+            
+            <span ref-type="disp-formula" rid="pone.0125049.e001">1</span> and 
+            <span ref-type="disp-formula" rid="pone.0125049.e002">2</span>). Therefore, these kernels are typically confronted with numerical problems due to
+            the large difference of numeric ranges in the feature vectors. For example, the population
+            size in each province in this study included over 100,000 people, while the mosquito
+            infection rate was less than 100. In this case, the population density has a wide
+            range of values, and the distance will be governed by this particular feature. Therefore,
+            standardizing the range of all features allows for each feature to contribute in an
+            approximately proportional manner to the final distance. The data in this study were
+            standardized to the range of the independent variables or the features of the data.
+            As a result, the computational time dramatically decreased, and more importantly,
+            the prediction power significantly increased. 
+            <span ref-type="table" rid="pone.0125049.t003">
+               <a href="#pone.0125049.t003">Table 3</a>
+            </span> also shows that the prediction performance of the SVM-R increased from 90.74 to 96.29%
+            after scaling the data, whereas the computational cost decreased slightly. Because
+            computational time is crucial when dealing with large datasets, scaling the data is
+            a very useful process for constructing a forecasting model for larger amounts of data
+            in the future and for enhancing the prediction efficiency.
+         </p>
+         <p>When the SVM is chosen as a forecasting technique for the dengue severity level prediction,
+            we need to first consider what kernel function is the most suitable for the dengue
+            data. A dynamic feature of the data used to predict the dengue severity level, e.g.,
+            climate factors and the mosquito infection rate, is that they are nonlinear. It has
+            been suggested that using nonlinear kernel functions could achieve a better performance
+            than linear kernel functions. Therefore, the SVM-R is used as the kernel function
+            of SVM because it can effectively handle instances in which the relationship between
+            the independent and dependent variables is nonlinear. In addition, the RBF kernel
+            has less complexity (
+            <span ref-type="table" rid="pone.0125049.t003">
+               <a href="#pone.0125049.t003">Table 3</a>
+            </span>) than the polynomial kernel because it has less hyperparameters, which influences
+            the complexity of model selection. This experiment demonstrates the performance of
+            prediction (
+            <span ref-type="table" rid="pone.0125049.t003">
+               <a href="#pone.0125049.t003">Table 3</a>
+            </span>) obtained from the RBF kernel compared with the polynomial and linear kernels. However,
+            Chih-Wei 
+            <i>et al</i>. [
+            <span ref-type="bibr" rid="pone.0125049.ref039">
+               <sup>
+                  <a href="#pone.0125049.ref039">39</a>
+               </sup>
+            </span>] suggested that the RBF kernel will not improve the performance of classification
+            when the number of features is very large; in that case, the linear kernel is preferred.
+            Selecting the most suitable SVM-R kernel parameters for a predictive model is another
+            challenging task of this research. The determinations of the optimal values of two
+            important parameters, C and 
+            <i>σ</i>
+            <sup>2</sup>, for the SVM-R, are shown in 
+            <span ref-type="fig" rid="pone.0125049.g003">Fig 3</span> (A) and 
+            <span ref-type="fig" rid="pone.0125049.g003">3</span> (B). This experiment explains that the performance of the kernel depends on the adjustable
+            parameter 
+            <i>σ</i>
+            <sup>2</sup> and should be carefully tuned to the problem at hand. Manually tuned parameters in
+            this study seemed naïve and required a high experimental time. However, only two parameters
+            did not need much more computational time than the heuristic methods. In addition,
+            C and 
+            <i>σ</i>
+            <sup>2</sup> are independent, and thus, the grid search can be easily parallelized, while this
+            is difficult in several advanced methods because they are iterative processes [
+            <span ref-type="bibr" rid="pone.0125049.ref039">
+               <sup>
+                  <a href="#pone.0125049.ref039">39</a>
+               </sup>
+            </span>].
+         </p>
+         <p>In addition, we compared the SVM-R with other state-of-the-art techniques. The SVR-R
+            provided the best values of all the evaluation criteria, sensitivity and specificity
+            (
+            <span ref-type="fig" rid="pone.0125049.g004">Fig 4</span>). The NN is an alternative model that can achieve a high prediction performance in
+            terms of sensitivity and specificity. However, the SVM-R obtained a higher specificity
+            and sensitivity than the NN. The SVM-R often outperforms the NN in practice because
+            it addresses the biggest problem of the NN; SVMs are less prone to overfitting. The
+            main drawback of the NN is that it has an expensive computational cost due to its
+            algorithm complexity and curse of the dimension problem. Learning too much of the
+            complexity of the NN results in overfitting the training set [
+            <span ref-type="bibr" rid="pone.0125049.ref038">
+               <sup>
+                  <a href="#pone.0125049.ref038">38</a>
+               </sup>
+            </span>]. Another issue to note is that even if the NN solutions used tend to converge, this
+            may not result in a unique solution [
+            <span ref-type="bibr" rid="pone.0125049.ref042">
+               <sup>
+                  <a href="#pone.0125049.ref042">42</a>
+               </sup>
+            </span>]. Although the DT and 
+            <i>KNN</i> are simple and have a reduced computational cost, their prediction powers are significantly
+            lower than the NN and SVM. The 
+            <i>KNN</i> had a specificity of 0.105, indicating that 10.5% of the high morbidity rate data
+            instances were predicted as low morbidity rates, whereas the DT had only 31.6% specificity.
+            These results are consistent with 
+            <span ref-type="fig" rid="pone.0125049.g005">Fig 5</span>, which shows that both the DT and 
+            <i>KNN</i> techniques obtained low prediction accuracies compared to the others. Among those
+            techniques, the SVM-R outperformed the other state-of-the-art techniques measured
+            by the maximum, average, and minimum accuracy. In addition, the difference of prediction
+            accuracy obtained from the training set and test set of the SVM-R was small (demonstrated
+            by the height of the rectangular boxes), which indicates that the model was not overfit.
+         </p>
+         <p>The results in 
+            <span ref-type="table" rid="pone.0125049.t004">
+               <a href="#pone.0125049.t004">Table 4</a>
+            </span> suggest the significance of the two introduced predictors for the forecasting model.
+            Infected dengue viruses in larvae and female mosquitoes have been demonstrated as
+            the main determinants of outbreaks. They can increase the prediction accuracy by 4.32%
+            on average for all models. The sensitivity and specificity also have been shown to
+            vary depending on those two new parameters because they decrease when these predictors
+            are omitted. Therefore, removing these parameters from the predictive model results
+            in a decline of all the evaluation criteria, which has never been studied in any previous
+            research.
+         </p>
+         <p>Unlike other state-of-the-art frameworks, the originality and novelty of this work
+            was introducing the use of the 
+            <i>Ae</i>. 
+            <i>aegypti</i> female mosquito and larva infection rates in the forecasting model to extrapolate
+            the morbidity rate of DF. Our study results demonstrate that newly introduced predictors
+            could effectively signal the risk of epidemics to local authorities in Thailand and
+            help to reduce the severity of the outbreak in the country. It provides better prediction
+            accuracy compared to state-of-the-art forecasting models such as the NN, DT, and 
+            <i>KNN</i> models In addition, the predictive model will inevitably complement and enhance the
+            success of national dengue control. However, there are some limitations to our study.
+            First, mosquito infection rate data have a limited availability in other areas. Even
+            with the impressive efforts of the research team from Chulalongkorn University in
+            collecting mosquito data from the studied areas, detecting the dengue virus in mosquitoes
+            using the RT-PCR technique is time-consuming and an expensive laboratory cost. It
+            was impossible to collect data and obtain the infection rate of mosquitoes for the
+            whole country within a limited time (12 months) for this research project, which leads
+            to the second limitation; the studied areas were small and fixed. However, the dynamic
+            of the morbidity rate in the community is usually influenced by local factors. Therefore,
+            the prediction model for a dengue outbreak is usually applicable only to a specific
+            study area [
+            <span ref-type="bibr" rid="pone.0125049.ref005">
+               <sup>
+                  <a href="#pone.0125049.ref005">5</a>
+               </sup>
+            </span>]. Although the prototype in this research exploits local dengue data, the proposed
+            methodology in this research could be applicable for other geographical areas. Furthermore,
+            the findings of this research could apply to other viral infectious diseases transmitted
+            by mosquitoes, e.g., malaria or yellow fever.
+         </p>
+         <p>Further studies are suggested to implement the forecasting model as a web-based application
+            accessible by a user or non-technical user. All relevant data for prediction should
+            be transformed into a data warehouse that is able to rapidly generate reports for
+            users, which will also create advantages for supporting decision making by policy
+            makers to strengthen dengue control and take precautions to prevent dengue epidemics
+            from becoming pervasive.
+         </p>
+      </div>
+      <back>
+         <div tag="ref-list">
+            <ul>
+               <title>References</title>
+               <li tag="ref">
+                  <a name="pone.0125049.ref001"></a>
+                  <label>1</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Gibbons</span>
+                        <span tagx="given-names">RV</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Vaughn</span>
+                        <span tagx="given-names">DW</span>
+                     </name>. 
+                     <span tagx="article-title">Dengue: an escalating problem</span>. 
+                     <span tagx="source">BMJ</span>. 
+                     <span tagx="year">2002</span>;
+                     <span tagx="volume">324</span>: 
+                     <span tagx="fpage">1563</span>–
+                     <span tagx="lpage">1566</span>. 
+                     <span class="pub-id'">[12089096]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref002"></a>
+                  <label>2</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Campbell-Lendrum</span>
+                        <span tagx="given-names">D</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Corvalan</span>
+                        <span tagx="given-names">C</span>
+                     </name>. 
+                     <span tagx="article-title">Climate change and developing-country cities: Implications for environmental health
+                        and equity
+                     </span>. 
+                     <span tagx="source">J Urban Health</span>. 
+                     <span tagx="year">2007</span>;
+                     <span tagx="volume">84</span>: 
+                     <span tagx="fpage">109</span>–
+                     <span tagx="lpage">117</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref003"></a>
+                  <label>3</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Racloz</span>
+                        <span tagx="given-names">V</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Ramsey</span>
+                        <span tagx="given-names">R</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tong</span>
+                        <span tagx="given-names">S</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Hu</span>
+                        <span tagx="given-names">W</span>
+                     </name>. 
+                     <span tagx="article-title">Surveillance of dengue fever virus: A review of epidemiological models and early warning
+                        systems
+                     </span>. 
+                     <span tagx="source">PLoS Negl Trop Dis</span>. 
+                     <span tagx="year">2012</span>;
+                     <span tagx="volume">6</span>: 
+                     <span tagx="fpage">e1648</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1371/journal.pntd.0001648</div>
+                     </div>
+                     <span class="pub-id'">[22629476]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref004"></a>
+                  <label>4</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Earnest</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tan</span>
+                        <span tagx="given-names">SB</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Wilder-Smith</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Machin</span>
+                        <span tagx="given-names">D</span>
+                     </name>. 
+                     <span tagx="article-title">Comparing statistical models to predict dengue fever notifications</span>. 
+                     <span tagx="source">Comput Math Methods Med</span>. 
+                     <span tagx="year">2012</span>;
+                     <span tagx="volume">2012</span>: 
+                     <span tagx="fpage">e758674</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1155/2012/758674</div>
+                     </div>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref005"></a>
+                  <label>5</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Hii</span>
+                        <span tagx="given-names">YL</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Zhu</span>
+                        <span tagx="given-names">H</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Ng</span>
+                        <span tagx="given-names">N</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Ng</span>
+                        <span tagx="given-names">LC</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Rocklöv</span>
+                        <span tagx="given-names">J</span>
+                     </name>. 
+                     <span tagx="article-title">Forecast of dengue incidence using temperature and rainfall</span>. 
+                     <span tagx="source">PLoS Negl Trop Dis</span>. 
+                     <span tagx="year">2012</span>;
+                     <span tagx="volume">6</span>: 
+                     <span tagx="fpage">e1908</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1371/journal.pntd.0001908</div>
+                     </div>
+                     <span class="pub-id'">[23209852]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref006"></a>
+                  <label>6</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Wangroongsarb</span>
+                        <span tagx="given-names">Y</span>
+                     </name>. 
+                     <span tagx="article-title">Dengue through school children in Thailand</span>. 
+                     <span tagx="source">Dengue Bull</span>. 
+                     <span tagx="year">1997</span>;
+                     <span tagx="volume">21</span>: 
+                     <span tagx="fpage">52</span>–
+                     <span tagx="lpage">62</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref007"></a>
+                  <label>7</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Chompoosri</span>
+                        <span tagx="given-names">J</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Thavara</span>
+                        <span tagx="given-names">U</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tawatsin</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Anantapreecha</span>
+                        <span tagx="given-names">S</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Siriyasatien</span>
+                        <span tagx="given-names">P</span>
+                     </name>. 
+                     <span tagx="article-title">Seasonal monitoring of dengue infection in 
+                        <i>Aedes aegypti</i> and serological feature of patients with suspected dengue in 4 central provinces
+                        of Thailand
+                     </span>. 
+                     <span tagx="source">Thai J Vet Med</span>. 
+                     <span tagx="year">2013</span>;
+                     <span tagx="volume">42</span>: 
+                     <span tagx="fpage">185</span>–
+                     <span tagx="lpage">193</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref008"></a>
+                  <label>8</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Faisal</span>
+                        <span tagx="given-names">T</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Taib</span>
+                        <span tagx="given-names">MN</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Ibrahim</span>
+                        <span tagx="given-names">F</span>
+                     </name>. 
+                     <span tagx="article-title">Neural network diagnostic system for dengue patients risk classification</span>. 
+                     <span tagx="source">J Med Syst</span>. 
+                     <span tagx="year">2012</span>;
+                     <span tagx="volume">36</span>: 
+                     <span tagx="fpage">661</span>–
+                     <span tagx="lpage">676</span>. 
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1007/s10916-010-9532-x</div>
+                     </div>
+                     <span class="pub-id'">[20703665]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref009"></a>
+                  <label>9</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Huang</span>
+                        <span tagx="given-names">X</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Williams</span>
+                        <span tagx="given-names">G</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Clements</span>
+                        <span tagx="given-names">ACA</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Hu</span>
+                        <span tagx="given-names">W</span>
+                     </name>. 
+                     <span tagx="article-title">Imported dengue cases, weather variation and autochthonous dengue incidence in cairns,
+                        Australia
+                     </span>. 
+                     <span tagx="source">PLoS ONE</span>. 
+                     <span tagx="year">2013</span>;
+                     <span tagx="volume">8</span>: 
+                     <span tagx="fpage">e81887</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1371/journal.pone.0081887</div>
+                     </div>
+                     <span class="pub-id'">[24349148]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref010"></a>
+                  <label>10</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Johansson</span>
+                        <span tagx="given-names">MA</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Cummings</span>
+                        <span tagx="given-names">DAT</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Glass</span>
+                        <span tagx="given-names">GE</span>
+                     </name>. 
+                     <span tagx="article-title">Multiyear climate variability and dengue—El Niño Southern Oscillation, Weather, and
+                        Dengue incidence in Puerto Rico, Mexico, and Thailand: A Longitudinal Data Analysis
+                     </span>. 
+                     <span tagx="source">PLoS Med</span>. 
+                     <span tagx="year">2009</span>;
+                     <span tagx="volume">6</span>: 
+                     <span tagx="fpage">e1000168</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1371/journal.pmed.1000168</div>
+                     </div>
+                     <span class="pub-id'">[19918363]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref011"></a>
+                  <label>11</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Stewart-Ibarra</span>
+                        <span tagx="given-names">AM</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Lowe</span>
+                        <span tagx="given-names">R</span>
+                     </name>. 
+                     <span tagx="article-title">Climate and non-climate drivers of dengue epidemics in southern coastal ecuador</span>. 
+                     <span tagx="source">Am J Trop Med Hyg</span>. 
+                     <span tagx="year">2013</span>;
+                     <span tagx="volume">88</span>: 
+                     <span tagx="fpage">971</span>–
+                     <span tagx="lpage">981</span>. 
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.4269/ajtmh.12-0478</div>
+                     </div>
+                     <span class="pub-id'">[23478584]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref012"></a>
+                  <label>12</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Gharbi</span>
+                        <span tagx="given-names">M</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Quenel</span>
+                        <span tagx="given-names">P</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Gustave</span>
+                        <span tagx="given-names">J</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Cassadou</span>
+                        <span tagx="given-names">S</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Ruche</span>
+                        <span tagx="given-names">GL</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Girdary</span>
+                        <span tagx="given-names">L</span>
+                     </name>, 
+                     <etal>et al</etal>
+                     <span tagx="article-title">Time series analysis of dengue incidence in Guadeloupe, French West Indies: Forecasting
+                        models using climate variables as predictors
+                     </span>. 
+                     <span tagx="source">BMC Infect Dis</span>. 
+                     <span tagx="year">2011</span>;
+                     <span tagx="volume">11</span>: 
+                     <span tagx="fpage">1</span>–
+                     <span tagx="lpage">13</span>. 
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1186/1471-2334-11-1</div>
+                     </div>
+                     <span class="pub-id'">[21199579]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref013"></a>
+                  <label>13</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Luz</span>
+                        <span tagx="given-names">PM</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Mendes</span>
+                        <span tagx="given-names">BVM</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Codeço</span>
+                        <span tagx="given-names">CT</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Struchiner</span>
+                        <span tagx="given-names">CJ</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Galvani</span>
+                        <span tagx="given-names">AP</span>
+                     </name>. 
+                     <span tagx="article-title">Time series analysis of dengue incidence in Rio de Janeiro, Brazil</span>. 
+                     <span tagx="source">Am J Trop Med Hyg</span>. 
+                     <span tagx="year">2008</span>;
+                     <span tagx="volume">79</span>: 
+                     <span tagx="fpage">933</span>–
+                     <span tagx="lpage">939</span>. 
+                     <span class="pub-id'">[19052308]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref014"></a>
+                  <label>14</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Thu</span>
+                        <span tagx="given-names">HM</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Aye</span>
+                        <span tagx="given-names">KM</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Thein</span>
+                        <span tagx="given-names">S</span>
+                     </name>. 
+                     <span tagx="article-title">The effect of temperature and humidity on dengue virus propagation in 
+                        <i>Aedes aegypti</i> mosquitos
+                     </span>. 
+                     <span tagx="source">Southeast Asian J Trop Med Public Health</span>. 
+                     <span tagx="year">1998</span>;
+                     <span tagx="volume">29</span>: 
+                     <span tagx="fpage">280</span>–
+                     <span tagx="lpage">284</span>. 
+                     <span class="pub-id'">[9886113]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref015"></a>
+                  <label>15</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Nakhapakorn</span>
+                        <span tagx="given-names">K</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tripathi</span>
+                        <span tagx="given-names">NK</span>
+                     </name>. 
+                     <span tagx="article-title">An information value based analysis of physical and climatic factors affecting dengue
+                        fever and dengue haemorrhagic fever incidence
+                     </span>. 
+                     <span tagx="source">Int J Health Geogr</span>. 
+                     <span tagx="year">2005</span>;
+                     <span tagx="volume">4</span>: 
+                     <span tagx="fpage">13</span>
+                     <span class="pub-id'">[15943863]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref016"></a>
+                  <label>16</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Descloux</span>
+                        <span tagx="given-names">E</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Mangeas</span>
+                        <span tagx="given-names">M</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Menkes</span>
+                        <span tagx="given-names">CE</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Lengaigne</span>
+                        <span tagx="given-names">M</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Leroy</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tehei</span>
+                        <span tagx="given-names">T</span>
+                     </name>, 
+                     <etal>et al</etal>
+                     <span tagx="article-title">Climate-Based Models for Understanding and Forecasting Dengue Epidemics</span>. 
+                     <span tagx="source">PLoS Negl Trop Dis</span>. 
+                     <span tagx="year">2012</span>;
+                     <span tagx="volume">6</span>: 
+                     <span tagx="fpage">e1470</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1371/journal.pntd.0001470</div>
+                     </div>
+                     <span class="pub-id'">[22348154]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref017"></a>
+                  <label>17</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Thammapalo</span>
+                        <span tagx="given-names">S</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Chongsuwiwatwong</span>
+                        <span tagx="given-names">V</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">McNeil</span>
+                        <span tagx="given-names">D</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Geater</span>
+                        <span tagx="given-names">A</span>
+                     </name>. 
+                     <span tagx="article-title">The climatic factors influencing the occurrence of dengue hemorrhagic fever in Thailand</span>. 
+                     <span tagx="source">Southeast Asian J Trop Med Public Health</span>. 
+                     <span tagx="year">2005</span>;
+                     <span tagx="volume">36</span>: 
+                     <span tagx="fpage">191</span>–
+                     <span tagx="lpage">196</span>. 
+                     <span class="pub-id'">[15906666]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref018"></a>
+                  <label>18</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Arcari</span>
+                        <span tagx="given-names">P</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tapper</span>
+                        <span tagx="given-names">N</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Pfueller</span>
+                        <span tagx="given-names">S</span>
+                     </name>. 
+                     <span tagx="article-title">Regional variability in relationships between climate and dengue/DHF in Indonesia</span>. 
+                     <span tagx="source">Singap J Trop Geogr</span>. 
+                     <span tagx="year">2007</span>;
+                     <span tagx="volume">28</span>: 
+                     <span tagx="fpage">251</span>–
+                     <span tagx="lpage">272</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref019"></a>
+                  <label>19</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Halide</span>
+                        <span tagx="given-names">H</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Ridd</span>
+                        <span tagx="given-names">P</span>
+                     </name>. 
+                     <span tagx="article-title">A predictive model for Dengue Hemorrhagic Fever epidemics</span>. 
+                     <span tagx="source">Int J Environ Health Res</span>. 
+                     <span tagx="year">2008</span>;
+                     <span tagx="volume">18</span>: 
+                     <span tagx="fpage">253</span>–
+                     <span tagx="lpage">265</span>. 
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1080/09603120801966043</div>
+                     </div>
+                     <span class="pub-id'">[18668414]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref020"></a>
+                  <label>20</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Focks</span>
+                        <span tagx="given-names">DA</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Daniels</span>
+                        <span tagx="given-names">E</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Haile</span>
+                        <span tagx="given-names">DG</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Keesling</span>
+                        <span tagx="given-names">JE</span>
+                     </name>. 
+                     <span tagx="article-title">A simulation model of the epidemiology of urban dengue fever: literature analysis,
+                        model development, preliminary validation, and samples of simulation results
+                     </span>. 
+                     <span tagx="source">Am J Trop Med Hyg</span>. 
+                     <span tagx="year">1995</span>;
+                     <span tagx="volume">53</span>: 
+                     <span tagx="fpage">489</span>–
+                     <span tagx="lpage">506</span>. 
+                     <span class="pub-id'">[7485707]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref021"></a>
+                  <label>21</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Focks</span>
+                        <span tagx="given-names">DA</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Chadee</span>
+                        <span tagx="given-names">DD</span>
+                     </name>. 
+                     <span tagx="article-title">Pupal survey: an epidemiologically significant surveillance method for 
+                        <i>Aedes aegypti</i>: an example using data from Trinidad
+                     </span>. 
+                     <span tagx="source">Am J Trop Med Hyg</span>. 
+                     <span tagx="year">1997</span>;
+                     <span tagx="volume">56</span>: 
+                     <span tagx="fpage">159</span>–
+                     <span tagx="lpage">167</span>. 
+                     <span class="pub-id'">[9080874]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref022"></a>
+                  <label>22</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Urdaneta</span>
+                        <span tagx="given-names">L</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Herrera</span>
+                        <span tagx="given-names">F</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Pernalete</span>
+                        <span tagx="given-names">M</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Zoghbi</span>
+                        <span tagx="given-names">N</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Rubio-Palis</span>
+                        <span tagx="given-names">Y</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Barrios</span>
+                        <span tagx="given-names">R</span>
+                     </name>, 
+                     <etal>et al</etal>
+                     <span tagx="article-title">Detection of dengue viruses in field-caught 
+                        <i>Aedes aegypti</i> (Diptera: Culicidae) in Maracay, Aragua state, Venezuela by type-specific polymerase
+                        chain reaction
+                     </span>. 
+                     <span tagx="source">Infect Genet Evol</span>. 
+                     <span tagx="year">2005</span>;
+                     <span tagx="volume">5</span>: 
+                     <span tagx="fpage">177</span>–
+                     <span tagx="lpage">184</span>. 
+                     <span class="pub-id'">[15639750]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref023"></a>
+                  <label>23</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Chen</span>
+                        <span tagx="given-names">CF</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Shu</span>
+                        <span tagx="given-names">PY</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Teng</span>
+                        <span tagx="given-names">HJ</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Su</span>
+                        <span tagx="given-names">CL</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Wu</span>
+                        <span tagx="given-names">JW</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Wang</span>
+                        <span tagx="given-names">JH</span>
+                     </name>, 
+                     <etal>et al</etal>
+                     <span tagx="article-title">Screening of dengue virus in field-caught 
+                        <i>Aedes aegypti</i> and 
+                        <i>Aedes albopictus</i> (Diptera: Culicidae) by one-step SYBR green-based reverse transcriptase-polymerase
+                        chain reaction assay during 2004–2007 in Southern Taiwan
+                     </span>. 
+                     <span tagx="source">Vector Borne Zoonotic Dis</span>. 
+                     <span tagx="year">2010</span>;
+                     <span tagx="volume">10</span>: 
+                     <span tagx="fpage">1017</span>–
+                     <span tagx="lpage">1025</span>. 
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1089/vbz.2008.0069</div>
+                     </div>
+                     <span class="pub-id'">[21128850]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref024"></a>
+                  <label>24</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Goh</span>
+                        <span tagx="given-names">KT</span>
+                     </name>. 
+                     <span tagx="article-title">Dengue—a re-emerging infectious disease in Singapore</span>. 
+                     <span tagx="source">Ann Acad Med Singap</span>. 
+                     <span tagx="year">1997</span>;
+                     <span tagx="volume">26</span>: 
+                     <span tagx="fpage">664</span>–
+                     <span tagx="lpage">670</span>. 
+                     <span class="pub-id'">[9494676]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref025"></a>
+                  <label>25</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Earnest</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tan</span>
+                        <span tagx="given-names">SB</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Wilder-Smith</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Machin</span>
+                        <span tagx="given-names">D</span>
+                     </name>. 
+                     <span tagx="article-title">Comparing statistical models to predict dengue fever notifications</span>. 
+                     <span tagx="source">Comput Math Methods Med</span>. 
+                     <span tagx="year">2012</span>;
+                     <span tagx="volume">2012</span>: 
+                     <span tagx="fpage">1</span>–
+                     <span tagx="lpage">6</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref026"></a>
+                  <label>26</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Choudhury</span>
+                        <span tagx="given-names">MAH</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Banu</span>
+                        <span tagx="given-names">S</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Islam</span>
+                        <span tagx="given-names">MA</span>
+                     </name>. 
+                     <span tagx="article-title">Forecasting dengue incidence in Dhaka, Bangladesh: A time series analysis</span>. 
+                     <span tagx="source">Dengue Bull</span>. 
+                     <span tagx="year">2008</span>;
+                     <span tagx="volume">32</span>: 
+                     <span tagx="fpage">29</span>–
+                     <span tagx="lpage">37</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref027"></a>
+                  <label>27</label>
+                  <div tagxxx="mixed-citation">Fathima S, Hundewale N. Comparison of classification techniques-SVM and Navies Bayes
+                     to predict the Arboviral disease-Dengue; 2011. pp. 538–539.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref028"></a>
+                  <label>28</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Schmidt</span>
+                        <span tagx="given-names">W-P</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Suzuki</span>
+                        <span tagx="given-names">M</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Dinh</span>
+                        <span tagx="given-names">Thiem V</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">White</span>
+                        <span tagx="given-names">RG</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tsuzuki</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Yoshida</span>
+                        <span tagx="given-names">L-M</span>
+                     </name>, 
+                     <etal>et al</etal>
+                     <span tagx="article-title">Population density, Water supply, and the risk of dengue fever in Vietnam: Cohort
+                        study and spatial analysis
+                     </span>. 
+                     <span tagx="source">PLoS Med</span>. 
+                     <span tagx="year">2011</span>;
+                     <span tagx="volume">8</span>: 
+                     <span tagx="fpage">e1001082</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1371/journal.pmed.1001082</div>
+                     </div>
+                     <span class="pub-id'">[21918642]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref029"></a>
+                  <label>29</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Ibrahim</span>
+                        <span tagx="given-names">F</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Faisal</span>
+                        <span tagx="given-names">T</span>
+                     </name>. 
+                     <span tagx="article-title">Non-invasive diagnosis of risk in dengue patients using bioelectrical impedance analysis
+                        and artificial neural network
+                     </span>. 
+                     <span tagx="source">Med Biol Eng Comput</span>. 
+                     <span tagx="year">2010</span>;
+                     <span tagx="volume">48</span>: 
+                     <span tagx="fpage">1141</span>–
+                     <span tagx="lpage">1148</span>. 
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1007/s11517-010-0669-z</div>
+                     </div>
+                     <span class="pub-id'">[20683676]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref030"></a>
+                  <label>30</label>
+                  <div tagxxx="mixed-citation">Husin NA, Salim N, Ahmad AR. Modeling of dengue outbreak prediction in Malaysia: A
+                     comparison of Neural Network and Nonlinear Regression Model. International Symposium
+                     on Information Technology; 2008. pp. 1–4.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref031"></a>
+                  <label>31</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Althouse</span>
+                        <span tagx="given-names">BM</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Ng</span>
+                        <span tagx="given-names">YY</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Cummings</span>
+                        <span tagx="given-names">DAT</span>
+                     </name>. 
+                     <span tagx="article-title">Prediction of dengue incidence using search query surveillance</span>. 
+                     <span tagx="source">PLoS Negl Trop Dis</span>. 
+                     <span tagx="year">2011</span>;
+                     <span tagx="volume">5</span>: 
+                     <span tagx="fpage">e1258</span>
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1371/journal.pntd.0001258</div>
+                     </div>
+                     <span class="pub-id'">[21829744]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref032"></a>
+                  <label>32</label>
+                  <div tagxxx="mixed-citation">Xie Y, Zheng H. Water supply forecasting based on developed LS-SVM. 3rd IEEE Conference
+                     on Industrial Electronics and Applications; 2008. pp. 2228–2233.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref033"></a>
+                  <label>33</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Yusof</span>
+                        <span tagx="given-names">Y</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Mustaffa</span>
+                        <span tagx="given-names">Z</span>
+                     </name>. 
+                     <span tagx="article-title">Dengue outbreak prediction: A least squares support vector machines approach</span>. 
+                     <span tagx="source">IJCTE</span>. 
+                     <span tagx="year">2011</span>;
+                     <span tagx="volume">3</span>: 
+                     <span tagx="fpage">489</span>–
+                     <span tagx="lpage">493</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref034"></a>
+                  <label>34</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Vapnik</span>
+                        <span tagx="given-names">VN</span>
+                     </name>. 
+                     <span tagx="source">The Nature of Statistical Learning Theory</span>. 
+                     <div tagxxx="edition">2nd ed.</div>
+                     <span class="publisher-loc'">[New York, USA]</span>: 
+                     <span class="publisher-name'">[Springer-Verlag New York, Inc.]</span>; 
+                     <span tagx="year">1995</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref035"></a>
+                  <label>35</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Hearst</span>
+                        <span tagx="given-names">MA</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Dumais</span>
+                        <span tagx="given-names">ST</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Osman</span>
+                        <span tagx="given-names">E</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Platt</span>
+                        <span tagx="given-names">J</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Scholkopf</span>
+                        <span tagx="given-names">B</span>
+                     </name>. 
+                     <span tagx="article-title">Support vector machines</span>. 
+                     <span tagx="source">IEEE Intelligent Systems and their Applications</span>. 
+                     <span tagx="year">1998</span>;
+                     <span tagx="volume">13</span>: 
+                     <span tagx="fpage">18</span>–
+                     <span tagx="lpage">28</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref036"></a>
+                  <label>36</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Evgeniou</span>
+                        <span tagx="given-names">T</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Pontil</span>
+                        <span tagx="given-names">M</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Poggio</span>
+                        <span tagx="given-names">T</span>
+                     </name>. 
+                     <span tagx="article-title">Statistical Learning Theory: A Primer</span>. 
+                     <span tagx="source">Int J Comput Vision</span>. 
+                     <span tagx="year">2000</span>;
+                     <span tagx="volume">38</span>: 
+                     <span tagx="fpage">9</span>–
+                     <span tagx="lpage">13</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref037"></a>
+                  <label>37</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Hall</span>
+                        <span tagx="given-names">M</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Frank</span>
+                        <span tagx="given-names">E</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Holmes</span>
+                        <span tagx="given-names">G</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Pfahringer</span>
+                        <span tagx="given-names">B</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Reutemann</span>
+                        <span tagx="given-names">P</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Witten</span>
+                        <span tagx="given-names">IH</span>
+                     </name>. 
+                     <span tagx="article-title">The WEKA data mining software: an update</span>. 
+                     <span tagx="source">SIGKDD Explor Newsl</span>. 
+                     <span tagx="year">2009</span>;
+                     <span tagx="volume">11</span>: 
+                     <span tagx="fpage">10</span>–
+                     <span tagx="lpage">18</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref038"></a>
+                  <label>38</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Cao</span>
+                        <span tagx="given-names">LJ</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Tay</span>
+                        <span tagx="given-names">FEH</span>
+                     </name>. 
+                     <span tagx="article-title">Support vector machine with adaptive parameters in financial time series forecasting</span>. 
+                     <span tagx="source">IEEE Trans Neural Netw</span>. 
+                     <span tagx="year">2003</span>;
+                     <span tagx="volume">14</span>: 
+                     <span tagx="fpage">1506</span>–
+                     <span tagx="lpage">1518</span>. 
+                     <div tagxxx="comment">doi: 
+                        <div tagxxx="ext-link">10.1109/TNN.2003.820556</div>
+                     </div>
+                     <span class="pub-id'">[18244595]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref039"></a>
+                  <label>39</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Hsu</span>
+                        <span tagx="given-names">C</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Chang</span>
+                        <span tagx="given-names">C</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Lin</span>
+                        <span tagx="given-names">C</span>
+                     </name>. 
+                     <div tagxxx="chapter-title">A practical guide to support vector classification</div>
+                     <span class="publisher-name'">[Department of Computer Science, National Taiwan University]</span>; 
+                     <span tagx="year">2003</span> pp. 
+                     <span tagx="fpage">1</span>–
+                     <span tagx="lpage">16</span>.
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref040"></a>
+                  <label>40</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Mourya</span>
+                        <span tagx="given-names">DT</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Gokhale</span>
+                     </name> null, 
+                     <name>
+                        <span tagx="surname">Basu</span>
+                        <span tagx="given-names">A</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Barde</span>
+                        <span tagx="given-names">PV</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Sapkal</span>
+                        <span tagx="given-names">GN</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Padbidri</span>
+                        <span tagx="given-names">VS</span>
+                     </name>, 
+                     <etal>et al</etal>
+                     <span tagx="article-title">Horizontal and vertical transmission of dengue virus type 2 in highly and lowly susceptible
+                        strains of 
+                        <i>Aedes aegypti</i> mosquitoes
+                     </span>. 
+                     <span tagx="source">Acta Virol</span>. 
+                     <span tagx="year">2001</span>;
+                     <span tagx="volume">45</span>: 
+                     <span tagx="fpage">67</span>–
+                     <span tagx="lpage">71</span>. 
+                     <span class="pub-id'">[11719984]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref041"></a>
+                  <label>41</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Scott</span>
+                        <span tagx="given-names">TW</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Amerasinghe</span>
+                        <span tagx="given-names">PH</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Morrison</span>
+                        <span tagx="given-names">AC</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Lorenz</span>
+                        <span tagx="given-names">LH</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Clark</span>
+                        <span tagx="given-names">GG</span>
+                     </name>, 
+                     <name>
+                        <span tagx="surname">Strickman</span>
+                        <span tagx="given-names">D</span>
+                     </name>, 
+                     <etal>et al</etal>
+                     <span tagx="article-title">Longitudinal studies of 
+                        <i>Aedes aegypti</i> (Diptera: Culicidae) in Thailand and Puerto Rico: blood feeding frequency
+                     </span>. 
+                     <span tagx="source">J Med Entomol</span>. 
+                     <span tagx="year">2000</span>;
+                     <span tagx="volume">37</span>: 
+                     <span tagx="fpage">89</span>–
+                     <span tagx="lpage">101</span>. 
+                     <span class="pub-id'">[15218911]</span>
+                  </div>
+               </li>
+               <li tag="ref">
+                  <a name="pone.0125049.ref042"></a>
+                  <label>42</label>
+                  <div tagxxx="mixed-citation">
+                     <name>
+                        <span tagx="surname">Mitchell</span>
+                        <span tagx="given-names">TM</span>
+                     </name>. 
+                     <span tagx="source">Machine Learning</span>. 
+                     <div tagxxx="edition">1st ed.</div>
+                     <span class="publisher-loc'">[New York, USA]</span>: 
+                     <span class="publisher-name'">[McGraw-Hill, Inc.]</span>; 
+                     <span tagx="year">1997</span>.
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </back>
+   </article>
+</html>

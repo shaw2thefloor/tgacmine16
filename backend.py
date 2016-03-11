@@ -1,4 +1,6 @@
 from pybrain.tools.shortcuts import buildNetwork
+from pycproject.readctree import CProject, CTree
+import os
 
 class Backend:
 
@@ -24,3 +26,8 @@ class Backend:
             ids is an array of document ids the features of which
             will be used to update the classifier
         '''
+
+    def generate_test_data(inputfolder):
+        testdata = CProject(os.getcwd(),"testdata")
+        for ctree in testdata.get_ctrees():
+            yield ctree.get_classifier_features()
