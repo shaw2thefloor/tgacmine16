@@ -7,6 +7,15 @@ class FeatureClassification:
     def __init__(self):
         self.categories = {}
     
+    def assemble_classes(self, list):
+        """
+        Create a set of classes from a set of inputs.
+        :param list: 
+        :return: 
+        """
+        for i in list:
+            self.add_class(i)
+    
     def add_class(self, category):
         """
         Add a new item to the list of classes encountered so far.

@@ -7,6 +7,6 @@ This python tool aims to help you identify papers based on your interest. Via a 
 To your virtualenv add:
 
 * [pycproject](https://github.com/ContentMine/pyCProject/)
-	* which in turn requires `pip install Image`
 * [word_cloud](https://github.com/amueller/word_cloud)
+	* which in turn requires `pip install Image`
 * [pybrain](https://github.com/pybrain/pybrain)
