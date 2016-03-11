@@ -23,12 +23,9 @@ class Backend:
         # access data
         self.data = CProject(os.getcwd(), inputfolder)
 
-
-
     def get_net(self):
         fileObject = open('neural_net.json', 'w')
         return pickle.load(fileObject)
-
 
     def get_table_data(self):
         '''
@@ -61,6 +58,7 @@ class Backend:
         # get features for id
         features = []
         for _id in ids:
+            # appends dictionaries to list
             features.append(self.data.get_ctree(_id).get_classifier_features)
 
         # convert strings to numerics
@@ -74,12 +72,29 @@ class Backend:
 
         # save net out to file
 
-
     def generate_test_data(self):
-        pdb.set_trace()
+        """
+        Yields feature dictionaries:
+
+        {'ID': ['PMC4427447'],
+          'authors': ['Kraisak Kesorn',
+           'Phatsavee Ongruk',
+           'Jakkrawarn Chompoosri',
+           'Atchara Phumee',
+           'Usavadee Thavara',
+           'Apiwat Tawatsin',
+           'Padet Siriyasatien'],
+          'binomial': [('Ae. aegypti', 20),
+           ('Aedes aegypti', 2),
+           ('Model construction', 1),
+           ('Data integration', 1)],
+          'journal': ['PLoS ONE'],
+          'keywords': [],
+          'title': ['Morbidity Rate Prediction of Dengue Hemorrhagic Fever (DHF) Using the Support Vector Machine and the ']
+        }
+        """
         for ctree in self.data.get_ctrees():
             yield ctree.get_classifier_features()
 
-
-# b = Backend()
+# b = Backend("testdata")
 # print(b.get_table_data())
