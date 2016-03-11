@@ -27,4 +27,3 @@ class FeatureClassification:
         
     def list_classes(self):
         return sorted(self.categories, key=self.categories.get)
-
