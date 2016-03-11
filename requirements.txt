@@ -1,0 +1,5 @@
+numpy
+pybrain
+scipy
+wordcloud
+Image

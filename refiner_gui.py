@@ -1,4 +1,5 @@
 from tkinter import *
+from wordcloud import Wordcloud
 
 root = Tk()
 frame = Frame(root)
@@ -51,6 +52,14 @@ def print_results():
             
 
 screen(titles_list)
+
+def create_wordle(text):
+    wordcloud = WordCloud(max_font_size=80, relative_scaling=1).generate(text)
+    fig = plt.figure(figsize=(12,12))
+    plt.imshow(wordcloud)
+    plt.axis("off")
+    return fig
+
 
 results = Button(frame, text = "Refine results", command = print_results)
 results.pack()
