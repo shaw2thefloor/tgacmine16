@@ -8,7 +8,16 @@ class Backend:
         '''
             get pre-boosted data for front-end display
         '''
-        return "hello larry"
+        return ["Battling Zika in Brazil",
+                       "A crucial time for public health preparedness: Zika virus and the 2016 Olympics, Umrah, and Hajj",
+                       "Offline: Brazil-the unexpected opportunity that Zika presents",
+                       "Zika Virus on the Move.",
+                       "Zika, and rapid diagnostic tests for malaria",
+                       "Research bodies vow to share data on Zika",
+                       "Scientists probe Zika link to birth defects",
+                       "Proving Zika link to birth defects poses huge challenge.",
+                       "Severe eye damage in infants with microcephaly is presumed to be due to Zika virus",
+                       "Healthcare staff encouraged to warn patients of the risks of the Zika virus"]
 
     def update_net(ids=[]):
         '''
