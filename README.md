@@ -9,3 +9,4 @@ To your virtualenv add:
 * [pycproject](https://github.com/ContentMine/pyCProject/)
 	* which in turn requires `pip install Image`
 * [word_cloud](https://github.com/amueller/word_cloud)
+* [pybrain](https://github.com/pybrain/pybrain)
