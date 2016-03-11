@@ -1,5 +1,5 @@
 from tkinter import *
-from wordcloud import wordcloud
+from wordcloud import Wordcloud
 
 root = Tk()
 frame = Frame(root)
