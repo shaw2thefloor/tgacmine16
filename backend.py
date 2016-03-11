@@ -5,6 +5,7 @@ from pycproject.readctree import CProject, CTree
 import os
 import os.path
 import json
+import jsonpickle as pickle
 
 class Backend:
 
