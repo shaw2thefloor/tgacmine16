@@ -31,5 +31,5 @@ class Backend:
         for ctree in testdata.get_ctrees():
             yield ctree.get_classifier_features()
             
-b = Backend()
-print(b.get_table_data())
+# b = Backend()
+# print(b.get_table_data())
