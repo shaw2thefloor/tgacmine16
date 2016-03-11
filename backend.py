@@ -3,8 +3,11 @@ from pybrain.datasets import SupervisedDataSet
 from pybrain.supervised.trainers import BackpropTrainer
 from pycproject.readctree import CProject, CTree
 import os
+import os.path
+import json
 
 class Backend:
+
 
     def __init__(self):
         # first try and load saved network
@@ -19,20 +22,17 @@ class Backend:
         fileObject = open('neural_net.json', 'w')
         return pickle.load(fileObject)
 
+
     def get_table_data(self):
         '''
             get pre-boosted data for front-end display
         '''
-        return ["Battling Zika in Brazil",
-                       "A crucial time for public health preparedness: Zika virus and the 2016 Olympics, Umrah, and Hajj",
-                       "Offline: Brazil-the unexpected opportunity that Zika presents",
-                       "Zika Virus on the Move.",
-                       "Zika, and rapid diagnostic tests for malaria",
-                       "Research bodies vow to share data on Zika",
-                       "Scientists probe Zika link to birth defects",
-                       "Proving Zika link to birth defects poses huge challenge.",
-                       "Severe eye damage in infants with microcephaly is presumed to be due to Zika virus",
-                       "Healthcare staff encouraged to warn patients of the risks of the Zika virus"]
+
+        paper_list = []
+        for td in self.generate_test_data("testdata"):
+            paper_list.append(td)
+
+        return paper_list
 
     def update_net(self, ids=[]):
         '''
@@ -40,10 +40,15 @@ class Backend:
             will be used to update the classifier
         '''
         net = get_net()
-        
 
 
-    def generate_test_data(inputfolder):
-        testdata = CProject(os.getcwd(),"testdata")
+
+    def generate_test_data(self, inputfolder):
+        curdir = os.getcwd()
+        testdata = CProject(curdir, "testdata")
         for ctree in testdata.get_ctrees():
             yield ctree.get_classifier_features()
+
+
+# b = Backend()
+# print(b.get_table_data())
