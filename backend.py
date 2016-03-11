@@ -1,8 +1,9 @@
-from pybrain.tools.shortcuts import buildNetwork
+# from pybrain.tools.shortcuts import buildNetwork
+from pycproject import readctree
 
 class Backend:
 
-    net = buildNetwork(2, 3, 1)
+    # net = buildNetwork(2, 3, 1)
 
     def get_table_data():
         '''
