@@ -1,4 +1,5 @@
 from Tkinter import *
+from wordcloud import wordcloud
 
 root = Tk()
 frame = Frame(root)
@@ -32,6 +33,14 @@ def print_results():
         # If var.get() is True, the checkbutton was clicked
         if var.get():
             print(button["text"])
+
+
+def create_wordle(text):
+    wordcloud = WordCloud(max_font_size=80, relative_scaling=1).generate(text)
+    fig = plt.figure(figsize=(12,12))
+    plt.imshow(wordcloud)
+    plt.axis("off")
+    return fig
 
 
 results = Button(frame, text = "Refine results", command = print_results)
