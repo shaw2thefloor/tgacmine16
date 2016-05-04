@@ -12,6 +12,7 @@ import pdb
 
 class Backend:
     def __init__(self, inputfolder):
+        pdb.set_trace()
         # first try and load saved network
         try:
             fileObject = open('neural_net.json', 'r')

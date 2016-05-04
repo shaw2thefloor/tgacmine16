@@ -12,14 +12,15 @@ import pdb
 
 class Backend:
     def __init__(self, inputfolder):
-        pdb.set_trace()
+        
         # first try and load saved network
         try:
-            fileObject = open('neural_net.json', 'r')
+            fileObject = open('neural_net.json', 'w')
         except FileNotFoundError:
             net = buildNetwork(n, 3, 1)
             fileObject = open('neural_net.json', 'w')
             pickle.dump(net, fileObject)
+        pdb.set_trace()
         # access data
         self.data = CProject(os.getcwd(), inputfolder)
 
