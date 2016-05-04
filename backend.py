@@ -3,25 +3,22 @@ from pybrain.datasets import SupervisedDataSet
 from pybrain.supervised.trainers import BackpropTrainer
 from pycproject.readctree import CProject, CTree
 import os
-import os.path
-import json
+
 
 class Backend:
-
-
     def __init__(self):
+        pass
         # first try and load saved network
-        try:
-            fileObject = open('neural_net.json','r')
-        except FileNotFoundError:
-            net = buildNetwork(2, 3, 1)
-            fileObject = open('neural_net.json','w')
-            pickle.dump(net, fileObject)
+        # try:
+        #     fileObject = open('neural_net.json','r')
+        # except FileNotFoundError:
+        #     net = buildNetwork(2, 3, 1)
+        #     fileObject = open('neural_net.json','w')
+        #     pickle.dump(net, fileObject)
 
     def get_net(self):
         fileObject = open('neural_net.json', 'w')
         return pickle.load(fileObject)
-
 
     def get_table_data(self):
         '''
@@ -40,8 +37,6 @@ class Backend:
             will be used to update the classifier
         '''
         net = get_net()
-
-
 
     def generate_test_data(self, inputfolder):
         curdir = os.getcwd()
