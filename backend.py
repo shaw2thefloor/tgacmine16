@@ -13,14 +13,17 @@ import pdb
 class Backend:
     def __init__(self, inputfolder):
         # first try and load saved network
+        pass
         try:
-            fileObject = open('neural_net.json', 'r')
+            pass
+           # fileObject = open('neural_net.json', 'r')
         except FileNotFoundError:
-            net = buildNetwork(n, 3, 1)
-            fileObject = open('neural_net.json', 'w')
-            pickle.dump(net, fileObject)
+            pass
+            # net = buildNetwork(n, 3, 1)
+            # fileObject = open('neural_net.json', 'w')
+            # pickle.dump(net, fileObject)
         # access data
-        self.data = CProject(os.getcwd(), inputfolder)
+        # self.data = CProject(os.getcwd(), inputfolder)
 
     def get_net(self):
         fileObject = open('neural_net.json', 'w')
@@ -31,7 +34,7 @@ class Backend:
             get pre-boosted data for front-end display
         '''
         paper_list = []
-        for td in self.generate_test_data():
+        for td in self.generate_test_data("testdata"):
             paper_list.append(td)
 
         # at this point, for each document in paper_list, run through the net with
