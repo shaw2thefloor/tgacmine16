@@ -39,6 +39,10 @@ INSTALLED_APPS = (
     'nn_web'
 )
 
+TEMPLATE_DIRS = [
+    'templates'
+]
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

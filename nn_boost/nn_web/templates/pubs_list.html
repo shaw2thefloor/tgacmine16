@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+
+	<style>
+		tr.border_bottom td {
+			border-bottom: 1pt solid black;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+<table>
+	{% for e in data %}
+
+		<tr class="border_bottom">
+			<td>
+
+				{%  for a in e.authors %}
+
+					<a href="/nn/list/?author={{ a }}" data-author="{{ a }}">{{ a }}</a>
+
+				{% endfor %}
+
+			</td>
+			<td>{{ e.title }}</td>
+			<td>{{ e.journal }}</td>
+			<td>{{ e.keywords }}</td>
+		</tr>
+
+
+	{% endfor %}
+</table>
+
+
+</body>
+</html>

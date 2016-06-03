@@ -4,5 +4,5 @@ import nn_web.views as v
 
 urlpatterns = patterns('nn_web.views',
 
-    url(r'^test/', 'test'),
+    url(r'^list/', 'index'),
 )

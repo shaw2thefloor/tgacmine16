@@ -1,7 +1,7 @@
 from pybrain.tools.shortcuts import buildNetwork
 from pybrain.datasets import SupervisedDataSet
 from pybrain.supervised.trainers import BackpropTrainer
-from pycproject.readctree import CProject, CTree
+
 import os
 import os.path
 import json
@@ -11,42 +11,53 @@ import pdb
 
 
 class Backend:
-    def __init__(self, inputfolder):
-        pdb.set_trace()
-        # first try and load saved network
+    def __init__(self):
         pass
-        try:
-            pass
-           # fileObject = open('neural_net.json', 'r')
-        except FileNotFoundError:
-            pass
-            # net = buildNetwork(n, 3, 1)
-            # fileObject = open('neural_net.json', 'w')
-            # pickle.dump(net, fileObject)
-        # access data
-        # self.data = CProject(os.getcwd(), inputfolder)
+
+
 
     def get_net(self):
         fileObject = open('neural_net.json', 'w')
         return pickle.load(fileObject)
 
+
+
     def get_table_data(self):
-        '''
-            get pre-boosted data for front-end display
-        '''
-        paper_list = []
-        for td in self.generate_test_data("testdata"):
-            paper_list.append(td)
 
-        # at this point, for each document in paper_list, run through the net with
-        # boost_coeffcient = net.activate(paper_list[x])
-        # use this boost coefficient to rank the results in the form
-        # where alpha can be adjusted to give greater or lesser weight to the net boost
+        data = [{'keywords': ['regulatory T-cells', 'human regulatory T-cells', 'infection', 'vaccination', 'pathogens',
+                              'tuberculosis', 'leprosy', 'BCG'],
+                 'authors': ['Mardi C. Boer', 'Simone A. Joosten', 'Tom H. M. Ottenhoff'],
+                 'journal': 'Frontiers in Immunology',
+                 'title': 'Regulatory T-Cells at the Interface between Human Host and Pathogens in Infectious Diseases and Vaccination'},
+                {'keywords': [],
+                 'authors': ['Jolanta Kolodziejek', 'Bernhard Seidel', 'Christof Jungbauer', 'Katharina Dimmel',
+                             'Michael Kolodziejek', 'Ivo Rudolf', 'Zdenek Hubálek', 'Franz Allerberger',
+                             'Norbert Nowotny'],
+                 'journal': 'PLoS ONE',
+                 'title': 'West Nile Virus Positive Blood Donation and Subsequent Entomological Investigation, Austria, 2014'},
+                {'keywords': [],
+                 'authors': ['Gloria Omosa-Manyonyi', 'Juliet Mpendo', 'Eugene Ruzagira', 'William Kilembe',
+                             'Elwyn Chomba',
+                             'François Roman', 'Patricia Bourguignon', 'Marguerite Koutsoukos', 'Alix Collard',
+                             'Gerald Voss',
+                             'Dagna Laufer', 'Gwynn Stevens', 'Peter Hayes', 'Lorna Clark', 'Emmanuel Cormier',
+                             'Len Dally',
+                             'Burc Barin', 'Jim Ackland', 'Kristen Syvertsen', 'Devika Zachariah', 'Kamaal Anas',
+                             'Eddy Sayeed', 'Angela Lombardo', 'Jill Gilmour', 'Josephine Cox', 'Patricia Fast',
+                             'Frances Priddy'], 'journal': 'PLoS ONE',
+                 'title': 'A Phase I Double Blind, Placebo-Controlled, Randomized Study of the Safety and Immunogenicity of an Adjuvanted HIV-1 Gag-Pol-Nef Fusion Protein and Adenovirus 35 Gag-RT-Int-Nef Vaccine in Healthy HIV-Uninfected African Adults'},
+                {'keywords': [],
+                 'authors': ['Kraisak Kesorn', 'Phatsavee Ongruk', 'Jakkrawarn Chompoosri', 'Atchara Phumee',
+                             'Usavadee Thavara', 'Apiwat Tawatsin', 'Padet Siriyasatien'],
+                 'journal': 'PLoS ONE',
+                 'title': 'Morbidity Rate Prediction of Dengue Hemorrhagic Fever (DHF) Using the Support Vector Machine and the '},
+                {'keywords': [], 'authors': ['Federico Giovannoni', 'Elsa B. Damonte', 'Cybele C. García'],
+                 'journal': 'PLoS ONE',
+                 'title': 'Cellular Promyelocytic Leukemia Protein Is an Important Dengue Virus Restriction Factor'}]
 
-        # alpha = 0.8
-        # rank = alpha * search_rank + 1-alpha * boost_coeffcient
+        return data
 
-        return paper_list
+
 
     def update_net(self, ids=[]):
         '''
@@ -56,13 +67,12 @@ class Backend:
         fc = input_classes.FeatureClassification()
         net = self.get_net()
 
+
+
+    '''
     def generate_test_data(self, inputfolder):
         curdir = os.getcwd()
         testdata = CProject(curdir, "testdata")
         for ctree in testdata.get_ctrees():
             yield ctree.get_classifier_features()
-
-    
-
-# b = Backend("testdata")
-# print(b.get_table_data())
+    '''
